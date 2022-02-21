@@ -1,0 +1,109 @@
+@import 'mobile'; 
+@import 'tablet'; 
+@import 'desktop'; 
+@import 'config'; 
+
+*, *::before ,*::after
+{
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box; 
+}  
+
+html 
+{ 
+    background-color: $navyBlueBg;
+} 
+
+body 
+{ 
+
+ color: #ffffff;  
+ font-family: $fontStack;  
+ line-height: 1.5rem;
+ font-size:14px;
+
+
+}    
+
+a { 
+    text-decoration: none;
+    color:#ffffff;
+} 
+
+li 
+{ 
+    list-style: none;
+}
+
+header 
+{ 
+    position:fixed;  
+    overflow: hidden;
+    top:0rem; 
+    left:0;
+    background-color: $navyBlueBg;
+    width:95%; 
+    z-index: 10000;
+}
+
+#main-section 
+{ 
+    @include flex(column,center);
+}
+
+.name 
+{ 
+    color:$lightGreen; 
+} 
+
+.webDev
+{ 
+    color: $customPink; 
+    font-weight:900;  
+    font-size:24px;
+} 
+
+.freeLance 
+{ 
+    color:$lightGreen; 
+    font-weight:900; 
+    font-size:24px;
+}  
+
+.transparent-bg 
+ {
+     background-color: #c4c4c410; 
+   
+ } 
+
+ img 
+ { 
+     max-width: 100%;
+ }   
+
+ ::placeholder 
+ { 
+     color:#ffffff;
+ } 
+
+ ::-ms-input-placeholder
+ { 
+     color: #ffffff;
+ } 
+
+ footer 
+ {
+     @include flex(column,center); 
+     background-color: $lightGreen;
+     min-height: 4rem;
+ }
+
+ 
+
+
+              
+
+
+
+

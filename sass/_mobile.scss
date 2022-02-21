@@ -1,0 +1,294 @@
+@import "config";
+
+@media screen and (max-width: 499px) {
+  header {
+    padding: 10px 0;
+    width: 100%;
+    height: 3em;
+  }
+
+  #navbar {
+    @include flex(row, space-between);
+  }
+
+  .page-links {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  #nav-menu {
+    position: relative;
+    background-color: $lightGreen;
+    height: 2px;
+    width: 25px;
+    right: 10px;
+    border-radius: 5px;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: $lightGreen;
+      height: 2px;
+      width: 25px;
+      border-radius: 5px;
+    }
+
+    &:after {
+      top: 10px;
+    }
+
+    &:before {
+      top: -10px;
+    }
+  }
+
+  #welcome-section {
+    @include flex(column, center);
+    margin: 8vh 0;
+    text-align: center;
+  }
+
+  .introduction {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+    font-size: 14px;
+    line-height: 1.6rem;
+  }
+
+  .Get-In-Touch {
+    background-color: transparent;
+    border: $lightGreen solid 2px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+
+  .moon {
+    position: absolute;
+    top: 65vh;
+    right: 70vw;
+    transform: scale(0.98);
+  }
+
+  section {
+    @include flex(column, center);
+    width: 90%;
+    text-align: start;
+    margin-bottom: 5vh;
+
+    .headings {
+      margin-bottom: 5vh;
+      font-size: 28px;
+      color: $customPink;
+    }
+
+    .description {
+      margin-bottom: 4vh;
+    }
+  }
+
+  #About-Me {
+    @include flex(column, center);
+    width: 100%;
+    padding: 5vh 5vw;
+
+    .transparent-bg {
+      @include flex(column, center);
+      padding: 3em 1em;
+      text-align: center;
+      line-height: 25px;
+      border-radius: 10px;
+      
+
+      .params1 {
+        font-size: 14px;
+        width: 95%;
+      }
+    }
+  }
+
+  #skill-set {
+    @include flex(column, center);
+
+    .transparent-bg {
+      @include flex(column, center);
+      border-radius: 10px;
+      height:11rem;
+      width: 100%;
+
+      .skills-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        width: 60%;
+        height: fit-content;
+        grid-gap: 3.5rem;
+        .fa-brands {
+          color: $lightGreen;
+          transform: scale(3.2);
+        }
+      }
+    }
+  } 
+    
+  
+  .project-tile 
+  { 
+      margin-bottom: 5vh;  
+
+      .transparent-bg 
+      {  @include flex(column,center); 
+        padding-top: 3vh;
+        border-radius: 20px; 
+       
+
+        .project-title  
+        { 
+            color:$lightGreen; 
+            text-align: center;
+            padding:1.8vh 0;
+        } 
+
+        .params1
+        { 
+            text-align: center;
+            margin-bottom:2vh;
+            width:80%;
+        } 
+
+        .separator 
+        { 
+            width:60%;
+            margin-bottom:2vh; 
+        } 
+
+        .skills-icons
+         { 
+             @include flex(row,space-between); 
+             width:90%;
+             color:$lightGreen;  
+             transform: scale(1.5); 
+             width:60%; 
+             padding:4vh 0;
+
+
+             .icons-list
+             {
+                display:grid; 
+                grid-template-columns: repeat(4,1fr);
+                align-items: center;
+                justify-items: center;
+                grid-gap:8px;
+         
+                 
+             }
+
+         }
+      }
+  } 
+
+  #email-form 
+  {  
+      @include flex(column,center);
+      .transparent-bg 
+      { 
+          padding: 8vh 5vw;  
+          width:100%;
+          border-radius: 10px;
+         
+
+
+          form 
+          { 
+          display:grid; 
+          grid-template-rows: 1fr 1fr ;
+          align-items:center; 
+          justify-items: end; 
+          width:100%;
+   
+          }
+
+          .names 
+           {   
+               @include flex(row,center);
+        
+           } 
+
+           .email,.subject,.names  
+            {   width:100%;
+                input{ 
+                width:100%; 
+                } 
+            }  
+
+
+            textarea 
+             { 
+     
+                width:100%;
+             } 
+
+             input,textarea,#send 
+             { 
+                margin-bottom: 1em;  
+                background-color: transparent;
+                padding:.3rem .9em;
+                outline:none; 
+                border: $lightGreen solid 2px;
+                border-radius: 15px;
+                color: #ffffff;
+                
+             } 
+
+             #send 
+             {
+                 min-width:100px;
+             }
+
+      } 
+         
+      .contact-info{  
+       
+        @include flex(column,center);
+        margin: 2rem 0; 
+        width:100%;  
+        
+
+      .email-contact, .cell-phone, .linkedIn
+      {   @include flex(column,center);
+           width: 100%; 
+
+          .transparent-bg 
+           {   
+               
+                @include flex(row,start);
+                padding: 1rem 1em;
+                margin: 1rem 0; 
+                border-radius: 10px;
+
+                .fa-solid, .fa-brands 
+                { 
+                    color:$lightGreen; 
+                    transform: scale(1.5);
+                    margin-right: 2em;
+                }
+            
+           }
+
+      } 
+    }
+
+
+
+  }
+
+
+
+}
