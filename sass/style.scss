@@ -43,7 +43,8 @@ header
     top:0rem; 
     left:0;
     background-color: $navyBlueBg;
-    width:95%; 
+    width:100vw; 
+    padding: 2vh 6vw;
     z-index: 10000;
 }
 
@@ -61,14 +62,14 @@ header
 { 
     color: $customPink; 
     font-weight:900;  
-    font-size:24px;
+    
 } 
 
 .freeLance 
 { 
     color:$lightGreen; 
     font-weight:900; 
-    font-size:24px;
+   
 }  
 
 .transparent-bg 
@@ -84,12 +85,14 @@ header
 
  ::placeholder 
  { 
-     color:#ffffff;
+     color:#c4c4c4;
+     font-family: $fontStack;
  } 
 
  ::-ms-input-placeholder
  { 
-     color: #ffffff;
+     color:#c4c4c4;
+     font-family: $fontStack;
  } 
 
  footer 

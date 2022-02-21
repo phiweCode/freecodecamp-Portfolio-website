@@ -4,7 +4,7 @@
   header {
     padding: 10px 0;
     width: 100%;
-    height: 3em;
+    height: 5em;
   }
 
   #navbar {
@@ -47,17 +47,31 @@
 
   #welcome-section {
     @include flex(column, center);
-    margin: 8vh 0;
+    margin: 15vh 0;
     text-align: center;
-  }
+    width:100vw;
+  
 
   .introduction {
     text-align: center;
     width: 100%;
     margin-bottom: 2em;
     font-size: 14px;
-    line-height: 1.6rem;
+    line-height: 1.6rem; 
+    width:80%;
+
+    .params2 
+  { 
+    font-size: 1.6rem; 
+    .webDev
+    { 
+      display:block; 
+    }
   }
+
+  } 
+
+  
 
   .Get-In-Touch {
     background-color: transparent;
@@ -70,9 +84,32 @@
 
   .moon {
     position: absolute;
-    top: 65vh;
+    top: 55vh;
     right: 70vw;
     transform: scale(0.98);
+  } 
+
+    .waves 
+   {  width: 100%; 
+  
+       .starts-mobile, .waves-mobile
+       { 
+        width:100vw;
+       }  
+
+       .stars-tablet, .waves-tablet 
+       {
+          
+           display: none; 
+           overflow: hidden; 
+           height: 0;
+           width:0;
+
+       }
+
+    
+   } 
+
   }
 
   section {
