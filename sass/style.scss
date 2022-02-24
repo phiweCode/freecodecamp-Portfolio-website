@@ -12,7 +12,9 @@
 
 html 
 { 
-    background-color: $navyBlueBg;
+    background-color: $navyBlueBg; 
+    width:100vw; 
+    @include flex(column,center)
 } 
 
 body 
@@ -39,7 +41,6 @@ li
 header 
 { 
     position:fixed;  
-    overflow: hidden;
     top:0rem; 
     left:0;
     background-color: $navyBlueBg;
@@ -75,7 +76,7 @@ header
 .transparent-bg 
  {
      background-color: #c4c4c410; 
-   
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.349);
  } 
 
  img 
@@ -100,7 +101,28 @@ header
      @include flex(column,center); 
      background-color: $lightGreen;
      min-height: 4rem;
- }
+ } 
+
+ .contact-and-map
+  {  
+      @include flex(column,center);
+      width:100%;
+  } 
+
+  .inactive
+   { 
+     display: none; 
+     width:0; 
+   } 
+
+   #menu-btn 
+   {
+       background-color: #c4c4c4;
+
+       height: 200%; 
+
+       z-index: 20;
+   }
 
  
 

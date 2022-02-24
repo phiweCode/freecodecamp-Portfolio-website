@@ -13,18 +13,43 @@
 
   .page-links {
     position: absolute;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-  }
+    height: fit-content;
+    text-align: center;
+    width: 20vw;
+    top:4vh; 
+    right:-1.8rem;  
+    background-color: $navyBlueBg; 
+    width:30vw;
+              
+      .links 
+       {
+         padding:0.8rem 0; 
+         color:$lightGreen; 
+         font-weight: 800; 
 
-  #nav-menu {
+         &:before 
+         { 
+           content: ""; 
+           height:50px;
+           width:50px;
+           background-color: #ffffff;
+         }
+       } 
+
+
+  } 
+
+  #nav-menu 
+  {
+
     position: relative;
     background-color: $lightGreen;
     height: 2px;
     width: 25px;
     right: 10px;
-    border-radius: 5px;
+    border-radius: 5px; 
+    z-index: -42;
+   
 
     &:after,
     &:before {
@@ -34,6 +59,7 @@
       height: 2px;
       width: 25px;
       border-radius: 5px;
+     
     }
 
     &:after {
@@ -43,7 +69,9 @@
     &:before {
       top: -10px;
     }
-  }
+  } 
+
+
 
   #welcome-section {
     @include flex(column, center);
@@ -62,7 +90,9 @@
 
     .params2 
   { 
-    font-size: 1.6rem; 
+    font-size: 1.6rem;  
+    margin:2vh 0;  
+
     .webDev
     { 
       display:block; 
@@ -100,6 +130,16 @@
        .stars-tablet, .waves-tablet 
        {
           
+           display: none; 
+           overflow: hidden; 
+           height: 0;
+           width:0;
+
+       } 
+
+         .waves-desktop,.stars-desktop
+       { 
+           
            display: none; 
            overflow: hidden; 
            height: 0;

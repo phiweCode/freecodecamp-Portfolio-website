@@ -33,7 +33,18 @@ function setUpMap(center)
 'top-left'
 );
 
-} 
+}  
+
+//menu -btn  
+
+const hamburgerMenu = document.querySelector("#menu-btn"); 
+const menuList = document.querySelector(".page-links"); 
+
+hamburgerMenu.addEventListener("click",()=>
+   { 
+     menuList.classList.toggle("inactive"); 
+   }
+)
 
 
 
