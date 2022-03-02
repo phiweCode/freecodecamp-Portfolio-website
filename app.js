@@ -35,16 +35,24 @@ function setUpMap(center)
 
 }  
 
-//menu -btn  
+//menu -btn   
 
-const hamburgerMenu = document.querySelector("#menu-btn"); 
-const menuList = document.querySelector(".page-links"); 
+const menuBtn = document.querySelector(".menu-container");
+let menuCheck = true;
+const hamburgerMenu = document.querySelector(".menu-container"); 
+const menuList = document.querySelector(".page-links");  
 
-hamburgerMenu.addEventListener("click",()=>
-   { 
-     menuList.classList.toggle("inactive"); 
-   }
-)
-
+menuBtn.addEventListener("click", () => { 
+  
+  menuList.classList.toggle("active-links"); 
+  
+  if (!menuCheck) {
+    menuBtn.classList.add("open");
+    menuCheck = true;
+  } else {
+    menuBtn.classList.remove("open");
+    menuCheck = false;
+  }
+});
 
 

@@ -45,6 +45,7 @@ header
     left:0;
     background-color: $navyBlueBg;
     width:100vw; 
+    height: 10vh;
     padding: 2vh 6vw;
     z-index: 10000;
 }
@@ -109,21 +110,77 @@ header
       width:100%;
   } 
 
-  .inactive
-   { 
-     display: none; 
-     width:0; 
-   } 
+  
+ .menu-container 
+ { 
+     position: relative; 
+     @include flex(column,center) ;
+     overflow: hidden; 
+     width: 60px;  
+     height: 40px;
+     cursor: pointer; 
+     transition: all .5s ease-in-out; 
 
-   #menu-btn 
-   {
-       background-color: #c4c4c4;
+      .ham 
+      { 
+          
+          width: 25px; 
+          height: 3px; 
+          background-color: $lightGreen; 
 
-       height: 200%; 
+          border-radius: 5px;  
+          pointer-events: none;
+          transition: all .4s ease-in-out; 
+      } 
 
-       z-index: 20;
-   }
+      .ham::after , .ham::before 
+      { 
+          content: ""; 
+          position: absolute;  
+          pointer-events: none;
+          width: 25px; 
+          height: 3px; 
+          background-color: $lightGreen; 
+         
+          border-radius: 5px; 
+          transition: all .4s ease-in-out; 
+    
+      } 
 
+      .ham::after
+      { 
+          transform: translateY(-8px);
+      }
+      .ham::before
+      { 
+          transform: translateY(8px);
+      } 
+
+      // animations for the ham menu 
+
+
+ } 
+  .open
+  { 
+     .ham 
+       { 
+           transform: rotate(360deg) translateX(-40px);
+           background-color: transparent;
+       } 
+
+       
+      .ham::before 
+       {   
+           transform: rotate(45deg)  translate(30px,-30px);
+       }
+
+      .ham::after
+       {    
+           transform: rotate(-45deg)  translate(30px,30px);
+       }
+    }
+
+ 
  
 
 

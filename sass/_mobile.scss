@@ -1,75 +1,91 @@
 @import "config";
 
 @media screen and (max-width: 499px) {
-  header {
+ 
+  // The styles below are for the nav menu 
+ 
+  header { 
+
     padding: 10px 0;
     width: 100%;
-    height: 5em;
-  }
+    height: 5em; 
 
-  #navbar {
-    @include flex(row, space-between);
-  }
+    #navbar 
+    { 
 
-  .page-links {
-    position: absolute;
-    height: fit-content;
-    text-align: center;
-    width: 20vw;
-    top:4vh; 
-    right:-1.8rem;  
-    background-color: $navyBlueBg; 
-    width:30vw;
-              
-      .links 
-       {
-         padding:0.8rem 0; 
-         color:$lightGreen; 
-         font-weight: 800; 
+      position:relative; 
+      @include flex(row, space-between); 
 
-         &:before 
-         { 
-           content: ""; 
-           height:50px;
-           width:50px;
-           background-color: #ffffff;
-         }
-       } 
+    #nav-menu {
 
-
-  } 
-
-  #nav-menu 
-  {
-
-    position: relative;
-    background-color: $lightGreen;
-    height: 2px;
-    width: 25px;
-    right: 10px;
-    border-radius: 5px; 
-    z-index: -42;
-   
-
-    &:after,
-    &:before {
-      content: "";
       position: absolute;
       background-color: $lightGreen;
-      height: 2px;
-      width: 25px;
-      border-radius: 5px;
-     
-    }
+      height: 0px;
+      width: 0px;
+      right: 0px;
+      border-radius: 5px; 
 
-    &:after {
-      top: 10px;
-    }
+      
+    .page-links { 
+      
+      position: absolute;
+      height: fit-content;
+      text-align: center;
+      width: 20vw;
+      top:4vh; 
+      right:-1.8rem;  
+      background-color: $navyBlueBg; 
+      width:30vw;
+      transform: translateX(40vw);
+      transition: all .2s ease-in-out;
+                
+          .links 
+          {  
+            position: relative; 
+            padding:0.8rem 0; 
+            color:$lightGreen; 
+            font-weight: 800;  
+            cursor: pointer; 
 
-    &:before {
-      top: -10px;
-    }
-  } 
+         &::after
+         { 
+            
+          position: absolute;
+            content: ""; 
+            bottom:0; 
+            left:25px;
+            width:60%; 
+            align-self: center;
+            height: 2px;
+            background-color: $lightGreen; 
+            transform: scale(0,1);
+            transition: transform 0.3s ease-in ;
+          
+         } 
+
+          &:hover:after
+         {  
+             transform: scale(1,1);
+            transition: transform 0.3s ease-in ;
+         }
+
+          }  
+
+         
+      }   
+
+      .active-links
+      { 
+           transform: translateX(0vw);
+           transition: all .2s ease-in-out;  
+      }
+    }    
+
+  }
+
+} 
+
+  // end of the nav menu 
 
 
 
@@ -150,7 +166,54 @@
     
    } 
 
+  } 
+
+  .social-media 
+{ 
+  position: fixed;  
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  top:48vh;  
+  left:-20vw;
+  z-index: 1000;  
+  width:100%;  
+
+  .vertical-line 
+  { position:absolute; 
+    top:21vh; 
+    left:11.5vw;
+    border: 1px solid $lightGreen; 
+    width: 300px;  
+    transform: translateX(500px);
+    transform: rotate(90deg);
+    z-index: -100;
+
+
   }
+
+
+   .fa-brands {
+          color: $lightGreen;
+          transform: scale(1.3); 
+          padding: 1.5vh 0vw;  
+          margin: 2px 0;
+          z-index: 1000;   
+          background-color: $navyBlueBg;
+           }  
+
+    .fa-brands:hover 
+    { 
+      border: 1px solid $lightGreen;  
+      border-radius: 5px;
+      transform: translateX(-20px);
+      transition: all .2s ease-in; 
+       padding: 1.5vh 1.5vw;  
+    
+    }
+
+
+}
 
   section {
     @include flex(column, center);

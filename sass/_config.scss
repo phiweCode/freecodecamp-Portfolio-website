@@ -1,4 +1,6 @@
+
 // variables 
+
 $navyBlueBg : #070228;  
 $lightGreen : #31ED7C; 
 $customPink : #df1c4b;  
@@ -8,7 +10,8 @@ $trasparentGraybg : rgba(196, 196, 196, 0.02);
 
 // mixins 
 
-@mixin flex($flexDirection,$justiification) { 
+@mixin flex($flexDirection,$justiification) 
+{ 
 
     display:flex; 
     flex-direction: $flexDirection;

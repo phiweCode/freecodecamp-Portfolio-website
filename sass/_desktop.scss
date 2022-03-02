@@ -6,37 +6,22 @@
      header {
     padding: 10px 4vw;
     width: 100%;
-    height: 4em;
-  }
+    height: 20em;
+  
 
   #navbar {
     
-    @include flex(row, space-between);
-  }
+    @include flex(row, space-between); 
 
-  .page-links {
-     position: absolute;
-     visibility: visible;
-    height: fit-content;
-    @include flex(row,center);
-    text-align: center;
-    width: 10vw; 
-    padding: 0;
-    border-radius : 10px;
-    top:-2vh; 
-    right:1.8rem;  
-    background-color: #fff; 
-    width:30vw; 
-    border: none;
+  
+ .menu-container 
+ {   
+   display:none; 
+    cursor: pointer; 
+   
+ } 
+  
 
-
-         .links 
-       {
-         padding:0 2vw; 
-         color:$lightGreen; 
-         font-weight: 800; 
-        }
-  }
 
   #nav-menu {
 
@@ -45,27 +30,76 @@
     height: 0px;
     width: 0px;
     right: 0px;
-    border-radius: 5px;
-    visibility: hidden;
+    border-radius: 59px;
+    visibility: visible; 
 
-    &:after,
-    &:before {
-      content: "";
-      position: absolute;
-      background-color: $lightGreen;
-      height: 0px;
-      width: 0px;
-      border-radius: 5px;
+    
+  .page-links {
+    
+    position: absolute;
+    height: fit-content;
+    @include flex(row,center);
+    text-align: center;
+    width: 10vw; 
+    padding: 0;
+    border-radius : 10px;
+    top:-2vh; 
+    right:8rem;  
+    background-color: transparent;  
+     border: 1px solid $customPink;
+    border: none;
+    width:60vw; 
+    visibility: visible; 
+    cursor: pointer;
+
+
+
+         .links 
+       { 
+         position: relative; 
+         padding:0 2vw; 
+         color:$lightGreen; 
+         font-size: 13px;
+         font-weight: 800;  
+         cursor: pointer; 
+         z-index: 500000;
+             
+             .links::after
+         { 
+            
+          position: absolute;
+            content: ""; 
+            bottom:2vh; 
+            left:0;
+            width:60px; 
+            align-self: center;
+            height: 50px;  
+            background-color: $lightGreen; 
+            transform: scale(0,1);
+            transition: transform 0.3s ease-in ;
+          
+         } 
+
+          .links:hover::after
+         {  
+             transform: scale(1,1); 
+            transition: transform 0.3s ease-in ;
+         }
+
+        } 
+
+        .contacts
+         { 
+           border: 2px solid $lightGreen; 
+           border-radius: 5px; 
+           padding:0.2vh 2vh;
+         }
+     }
+
     }
 
-    &:after {
-      top: 10px;
-    }
-
-    &:before {
-      top: -10px;
-    }
   }
+}
 
   #welcome-section { 
     
@@ -152,6 +186,56 @@
    } 
 
  
+
+} 
+
+
+
+
+.social-media 
+{ 
+  position: fixed;  
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  top:48vh;  
+  left:-20vw;
+  z-index: 1000;  
+  width:100%;  
+
+  .vertical-line 
+  { position:absolute; 
+    top:21vh; 
+    left:11.5vw;
+    border: 1px solid $lightGreen; 
+    width: 300px;  
+    transform: translateX(500px);
+    transform: rotate(90deg);
+    z-index: -100;
+
+
+  }
+
+
+   .fa-brands {
+          color: $lightGreen;
+          transform: scale(1.3); 
+          padding: 1.5vh 0vw;  
+          margin: 2px 0;
+          z-index: 1000;   
+          background-color: $navyBlueBg;
+           }  
+
+    .fa-brands:hover 
+    { 
+      border: 1px solid $lightGreen;  
+      border-radius: 5px;
+      transform: translateX(-20px);
+      transition: all .2s ease-in; 
+       padding: 1.5vh 1.5vw;  
+    
+    }
+
 
 }
 
@@ -252,7 +336,7 @@
         padding-top: 3vh;
         border-radius: 20px;  
           background-color: #070228b6;  
-         box-shadow: 0 0 25px black;
+         box-shadow: 0 0 25px rgb(0, 0, 0);
 
         .project-title  
         {    
@@ -286,7 +370,7 @@
         .skills-icons
          { 
              @include flex(row,space-between); 
-             width:90%;
+             width:100%;
              color:$lightGreen;  
              transform: scale(1.5); 
              width:60%; 
@@ -437,7 +521,7 @@
 } 
 
 
-@media screen and (min-width: 1160px) 
+@media screen and (min-width: 1148px) 
 { 
 
      header {
@@ -447,34 +531,10 @@
   }
 
   #navbar {
-    @include flex(row, space-between);
-  }
-
-  .page-links {
-     position: absolute;
-     visibility: visible;
-    height: fit-content;
-    @include flex(row,center);
-    text-align: center;
-    width: 10vw; 
-    padding: 0;
-    border-radius : 10px;
-    top:-2vh; 
-    right:1.8rem;  
-    background-color: #fff; 
-    width:30vw; 
-    border: none;
+    @include flex(row, space-between);  
 
 
-         .links 
-       {
-         padding:0 2vw; 
-         color:$lightGreen; 
-         font-weight: 800; 
-        }
-  }
-
-  #nav-menu {
+    #nav-menu {
 
     position: absolute;
     background-color: $lightGreen;
@@ -500,8 +560,66 @@
 
     &:before {
       top: -10px;
-    }
+    } 
+
+    .page-links {
+     position: absolute;
+     visibility: visible;
+    height: fit-content;
+    @include flex(row,center);
+    text-align: center;
+    width: 10vw; 
+    padding: 0;
+    top:-2vh; 
+    right:1.8rem;  
+    background-color: #fff; 
+    width:30vw; 
+    border: 1px solid $customPink; 
+    border-top: none;
+    cursor: pointer;
+
+
+         .links 
+       {  
+         position:relative;  
+          @include flex(column,center);
+         padding:0 2vw; 
+         color:$customPink; 
+         font-weight: 800; 
+          cursor: pointer;
+             
+             &::after
+         { 
+            
+          position: absolute;
+            content: ""; 
+            bottom:0; 
+            left:2;
+            width:60px; 
+            align-self: center;
+            height: 2px;
+            background-color: $lightGreen; 
+            transform: scale(0,1);
+            transition: transform 0.3s ease-in ;
+          
+         } 
+
+          &:hover:after
+         {  
+             transform: scale(1,1);
+            transition: transform 0.3s ease-in ;
+         }
+        }
   }
+
+  } 
+
+  
+
+
+  }
+
+
 
   #welcome-section { 
     
@@ -514,7 +632,7 @@
   .introduction { 
     position: absolute; 
     top:20vh;
-    left:2vw;
+    left:-10vw;
     text-align: start;
     width: 100%;
     margin-bottom: 2em;
@@ -594,7 +712,7 @@
   section {
 
     @include flex(column, center);
-    width: 90%;
+    width: 70%;
     text-align: start;
     margin-bottom: 5vh;
 
@@ -612,7 +730,7 @@
 
   #About-Me {
     @include flex(column, center);
-    width: 100%;
+    width: 75%;
     padding: 5vh 5vw;
 
     .transparent-bg {
@@ -662,46 +780,80 @@
   { 
     .projects-container 
     {  
-      background-color: #c4c4c41f ; 
-      padding:6vh 3vw;
+      background-color: $navyBlueBg; 
+      padding:6vh 3vw;  
+      @include flex(column,center);
+      width:60vw;
 
   .project-tile 
   {   
       position:relative;
-      margin-bottom: 5vh;   
+      margin: 20vh 0;   
+      transform: translate(250px);
+      width:40vw;
+      min-width: 500px;
     
 
       .projectCover
       {    
           position:absolute;
-          background-color: #070228b6; 
+         background-color: $navyBlueBg;
           width:100%;
           height: 100%; 
-          border-radius: 20px;  
+          border-radius: 5px;  
           z-index: 10;
+      } 
+
+      .first,.third
+      { 
+        position: absolute; 
+        right:25rem; 
+        width: 500px; 
       }
+     
 
       .transparent-bg 
       {  
-
         @include flex(column,center); 
         padding-top: 3vh;
-        border-radius: 20px;  
+        border-radius: 5px;  
         background-color: #070228b6;  
-        box-shadow: 0 0 25px black;
+        box-shadow: 0 0 25px black;  
+
+        .projectShot
+        { 
+          background: rgb(0, 0, 0)
+
+        }
 
         .project-title  
         {    
              position:absolute;
-             top:20%;
+             top:-3.5rem;
+             right:0;
             color:$lightGreen; 
             text-align: center;
             padding:1.8vh 0;
             z-index: 20; 
             font-size: 20px; 
-            background-color: #00000050;
+            background-color:transparent;
             padding:2vh 2vw;
+            border-radius: 5px; 
+            
         } 
+
+        .even-title
+         {
+           left:0; 
+           width:60%;  
+           text-align: start;
+         } 
+
+         .even-icon
+         {
+           left:3.5rem; 
+           width:60%; 
+         } 
 
         .params1
         { 
@@ -713,21 +865,27 @@
         } 
 
         .separator 
-        { 
+        {   
+            display: none; 
             width:60%;
             margin-bottom:2vh; 
             z-index: 20;
         } 
 
         .skills-icons
-         { 
+         {   
+             position:absolute; 
+             bottom:-3.5rem;
+             right:3.5em; 
              @include flex(row,space-between); 
-             width:90%;
              color:$lightGreen;  
+               background-color:transparent;
              transform: scale(1.5); 
-             width:60%; 
-             padding:4vh 0; 
-             z-index: 20;
+             width:40%; 
+             padding:1vh 2vw; 
+             z-index: 20; 
+             border-radius: 5px;
+       
 
 
              .icons-list
@@ -743,7 +901,23 @@
 
          }
       }
-  }  
+  }   
+
+  .even-tile
+  { 
+      position:relative;
+      margin: 10vh 0;   
+      transform: translate(-250px);
+      width:40vw;
+      min-width: 500px; 
+
+       .second,.fourth
+      { 
+        position: absolute; 
+        right:-400px; 
+        width: 500px; 
+      }
+  }
 }
 }
 
@@ -867,4 +1041,6 @@
 
   }
     
-} 
+}  
+
+
