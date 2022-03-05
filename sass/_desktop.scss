@@ -31,7 +31,8 @@
     width: 0px;
     right: 0px;
     border-radius: 59px;
-    visibility: visible; 
+    visibility: visible;  
+    z-index: 10000; 
 
     
   .page-links {
@@ -39,7 +40,7 @@
     position: absolute;
     height: fit-content;
     @include flex(row,center);
-    text-align: center;
+    text-align: center; 
     width: 10vw; 
     padding: 0;
     border-radius : 10px;
@@ -49,7 +50,10 @@
      border: 1px solid $customPink;
     border: none;
     width:60vw; 
-    visibility: visible; 
+    visibility: visible;  
+    transform: translateX(0vw);
+    transition: all .4s ease-in-out; 
+    opacity: 1;
     cursor: pointer;
 
 
@@ -92,7 +96,21 @@
          { 
            border: 2px solid $lightGreen; 
            border-radius: 5px; 
-           padding:0.2vh 2vh;
+           padding:0.2vh 2vh; 
+         }  
+
+         .contacts:hover 
+          {
+            border: 2px solid $customPink;  
+            transform: scale(.9); 
+            color:$customPink; 
+            transition: all 0.3s ease-in ;
+          }
+
+         .contacts:hover::after 
+         { 
+            transform: scale(0,1); 
+            transition: transform 0.3s ease-in ;
          }
      }
 
@@ -135,8 +153,17 @@
     font-size: 14px;
     padding: 2px 3vw;
     border-radius: 8px; 
-    align-self: start;
-  }
+    align-self: start; 
+    cursor: pointer; 
+  } 
+
+  .Get-In-Touch:hover 
+  {
+     border: 2px solid $customPink;   
+     transform: scale(.9);
+     transition: all .3s ease-in-out;
+  } 
+
 
   .moon {
     position: absolute;
@@ -440,7 +467,7 @@
                 width:100%;
              } 
 
-             input,textarea,#send 
+             input,textarea,.send
              { 
                 margin-bottom: 1em;  
                 background-color: transparent;
@@ -448,17 +475,31 @@
                 outline:none; 
                 border: $lightGreen solid 2px;
                 border-radius: 15px;
-                color: #ffffff;
+                color: #ffffff; 
+                z-index: 1000000;
                 
              } 
 
-             #send 
+             .send 
              {
                  min-width:100px;
                  align-self: end;
                  color:#c4c4c4;
-                 font-family: $fontStack;
-             }
+                 font-family: $fontStack; 
+                 cursor: pointer; 
+             } 
+
+             .send:hover 
+              { 
+                border: 2px solid $customPink; 
+                transform: scale(.9); 
+                transition: all .3s ease-in-out; 
+              } 
+
+               input:focus ,textarea:focus 
+                { 
+                    border: 2px solid $customPink; 
+                }
 
             }
 
@@ -963,7 +1004,7 @@
                 width:100%;
              } 
 
-             input,textarea,#send 
+             input,textarea,.send 
              { 
                 margin-bottom: 1em;  
                 background-color: transparent;
@@ -980,8 +1021,14 @@
                  min-width:100px;
                  align-self: end;
                  color:#c4c4c4;
-                 font-family: $fontStack;
-             }
+                 font-family: $fontStack; 
+                 cursor:pointer ; 
+             } 
+
+               input:focus ,textarea:focus 
+                { 
+                    border: 2px solid $customPink; 
+                }
 
             }
 

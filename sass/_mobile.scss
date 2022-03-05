@@ -121,11 +121,19 @@
 
   .Get-In-Touch {
     background-color: transparent;
-    border: $lightGreen solid 2px;
+    border: $lightGreen solid 2px; 
+    font-family:  $fontStack;
     color: #ffffff;
     font-size: 14px;
     padding: 5px 20px;
     border-radius: 10px;
+  } 
+
+   .Get-In-Touch:hover 
+  {
+     border: 2px solid $customPink;   
+     transform: scale(.9);
+     transition: all .3s ease-in-out;
   }
 
   .moon {
@@ -375,7 +383,7 @@
                 width:100%;
              } 
 
-             input,textarea,#send 
+             input,textarea,.send 
              { 
                 margin-bottom: 1em;  
                 background-color: transparent;
@@ -383,14 +391,35 @@
                 outline:none; 
                 border: $lightGreen solid 2px;
                 border-radius: 15px;
-                color: #ffffff;
-                
+                color: #ffffff; 
+                z-index: 10000;                
              } 
 
              #send 
              {
                  min-width:100px;
-             }
+             } 
+
+             .send 
+             {
+                 min-width:100px;
+                 align-self: end;
+                 color:#c4c4c4;
+                 font-family: $fontStack; 
+                 cursor: pointer; 
+             } 
+
+             .send:hover 
+              { 
+                border: 2px solid $customPink; 
+                transform: scale(.9); 
+                transition: all .3s ease-in-out; 
+              } 
+
+               input:focus ,textarea:focus 
+                { 
+                    border: 2px solid $customPink; 
+                }
 
       } 
          

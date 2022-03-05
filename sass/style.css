@@ -119,10 +119,18 @@
   #welcome-section .Get-In-Touch {
     background-color: transparent;
     border: #31ED7C solid 2px;
+    font-family: "Montserrat", sans-serif;
     color: #ffffff;
     font-size: 14px;
     padding: 5px 20px;
     border-radius: 10px;
+  }
+  #welcome-section .Get-In-Touch:hover {
+    border: 2px solid #df1c4b;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
   }
   #welcome-section .moon {
     position: absolute;
@@ -436,7 +444,7 @@
   #email-form .transparent-bg textarea {
     width: 100%;
   }
-  #email-form .transparent-bg input, #email-form .transparent-bg textarea, #email-form .transparent-bg #send {
+  #email-form .transparent-bg input, #email-form .transparent-bg textarea, #email-form .transparent-bg .send {
     margin-bottom: 1em;
     background-color: transparent;
     padding: .3rem .9em;
@@ -444,9 +452,29 @@
     border: #31ED7C solid 2px;
     border-radius: 15px;
     color: #ffffff;
+    z-index: 10000;
   }
   #email-form .transparent-bg #send {
     min-width: 100px;
+  }
+  #email-form .transparent-bg .send {
+    min-width: 100px;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    color: #c4c4c4;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+  }
+  #email-form .transparent-bg .send:hover {
+    border: 2px solid #df1c4b;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  #email-form .transparent-bg input:focus, #email-form .transparent-bg textarea:focus {
+    border: 2px solid #df1c4b;
   }
   #email-form .contact-info {
     display: -webkit-box;
@@ -664,6 +692,13 @@
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
         align-self: start;
+  }
+  #welcome-section .Get-In-Touch:hover {
+    border: 2px solid #df1c4b;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
   }
   #welcome-section .moon {
     position: absolute;
@@ -984,22 +1019,34 @@
   #email-form .transparent-bg form textarea {
     width: 100%;
   }
-  #email-form .transparent-bg form input, #email-form .transparent-bg form textarea, #email-form .transparent-bg form #send {
+  #email-form .transparent-bg form input, #email-form .transparent-bg form textarea, #email-form .transparent-bg form .send {
     margin-bottom: 1em;
     background-color: transparent;
     padding: .3rem .9em;
     outline: none;
     border: #31ED7C solid 2px;
     border-radius: 15px;
+    z-index: 100000;
     color: #ffffff;
   }
-  #email-form .transparent-bg form #send {
+  #email-form .transparent-bg form .send {
     min-width: 100px;
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
     color: #c4c4c4;
     font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+  }
+  #email-form .transparent-bg form .send:hover {
+    border: 2px solid #df1c4b;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  #email-form .transparent-bg form input:focus, #email-form .transparent-bg form textarea:focus {
+    border: 2px solid #df1c4b;
   }
   #email-form .contact-info {
     display: -webkit-box;
@@ -1148,6 +1195,7 @@
     right: 0px;
     border-radius: 59px;
     visibility: visible;
+    z-index: 10000;
   }
   header #navbar #nav-menu .page-links {
     position: absolute;
@@ -1178,6 +1226,11 @@
     border: none;
     width: 60vw;
     visibility: visible;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    opacity: 1;
     cursor: pointer;
   }
   header #navbar #nav-menu .page-links .links {
@@ -1219,6 +1272,22 @@
     border: 2px solid #31ED7C;
     border-radius: 5px;
     padding: 0.2vh 2vh;
+  }
+  header #navbar #nav-menu .page-links .contacts:hover {
+    border: 2px solid #df1c4b;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    color: #df1c4b;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  header #navbar #nav-menu .page-links .contacts:hover::after {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
   }
   #welcome-section {
     display: -webkit-box;
@@ -1264,6 +1333,14 @@
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
         align-self: start;
+    cursor: pointer;
+  }
+  #welcome-section .Get-In-Touch:hover {
+    border: 2px solid #df1c4b;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
   }
   #welcome-section .moon {
     position: absolute;
@@ -1619,7 +1696,7 @@
   #email-form .transparent-bg form textarea {
     width: 100%;
   }
-  #email-form .transparent-bg form input, #email-form .transparent-bg form textarea, #email-form .transparent-bg form #send {
+  #email-form .transparent-bg form input, #email-form .transparent-bg form textarea, #email-form .transparent-bg form .send {
     margin-bottom: 1em;
     background-color: transparent;
     padding: .3rem .9em;
@@ -1627,14 +1704,26 @@
     border: #31ED7C solid 2px;
     border-radius: 15px;
     color: #ffffff;
+    z-index: 1000000;
   }
-  #email-form .transparent-bg form #send {
+  #email-form .transparent-bg form .send {
     min-width: 100px;
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
     color: #c4c4c4;
     font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+  }
+  #email-form .transparent-bg form .send:hover {
+    border: 2px solid #df1c4b;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  #email-form .transparent-bg form input:focus, #email-form .transparent-bg form textarea:focus {
+    border: 2px solid #df1c4b;
   }
   #email-form .contact-info {
     display: -webkit-box;
@@ -2241,7 +2330,7 @@
   #email-form .transparent-bg form textarea {
     width: 100%;
   }
-  #email-form .transparent-bg form input, #email-form .transparent-bg form textarea, #email-form .transparent-bg form #send {
+  #email-form .transparent-bg form input, #email-form .transparent-bg form textarea, #email-form .transparent-bg form .send {
     margin-bottom: 1em;
     background-color: transparent;
     padding: .3rem .9em;
@@ -2257,6 +2346,10 @@
         align-self: end;
     color: #c4c4c4;
     font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+  }
+  #email-form .transparent-bg form input:focus, #email-form .transparent-bg form textarea:focus {
+    border: 2px solid #df1c4b;
   }
   #email-form .contact-info {
     display: -webkit-box;

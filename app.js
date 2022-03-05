@@ -47,10 +47,12 @@ menuBtn.addEventListener("click", () => {
   menuList.classList.toggle("active-links"); 
   
   if (!menuCheck) {
-    menuBtn.classList.add("open");
+    menuBtn.classList.add("open"); 
+    menuList.classList.add("active-links"); 
     menuCheck = true;
   } else {
     menuBtn.classList.remove("open");
+    menuList.classList.remove("active-links"); 
     menuCheck = false;
   }
 });
