@@ -63,10 +63,18 @@
 
                     <ul class="page-links">
 
-                        <li class="links">Home</li>
-                        <li class="links">About</li>
-                        <li class="links">Projects</li>
-                        <li class="links contacts">Contacts</li>
+                       <a href="#welcome-section">
+                           <li class="links">Home</li>
+                       </a>
+                        <a href="#About-Me">
+                            <li class="links">About</li>
+                        </a>
+                        <a href="#Project">
+                            <li class="links">Projects</li>
+                        </a>
+                        <a href="#contacts">
+                            <li class="links contacts">Contacts</li>
+                        </a>
 
                     </ul>
                 </div>
@@ -638,7 +646,7 @@
 
                         <div class="email-contact">
                             <div class="transparent-bg">
-                                <i class="fa-solid fa-at"></i><span>thabo.s.mngoma@gmail.com</span>
+                                <i class="fa-solid fa-image-portrait"></i></i><span>My resume</span>
                             </div>
                         </div>
                         <div class="cell-phone">
@@ -684,7 +692,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
         integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./javascript/animations.js"></script>
+    <script src="./javascript/animations.js"></script> 
+
+    <!--jQuery for crossbrowser smooth scrolling--> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+            
+            $("a").on('click', function(event) {
+
+            
+            if (this.hash !== "") {
+            
+            event.preventDefault();
+
+         
+            var hash = this.hash;
+
+    
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 900, function(){
+
+           
+            window.location.hash = hash;
+            });
+            } 
+            });
+            });
+        </script>
 
 
 

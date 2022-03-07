@@ -91,6 +91,11 @@ footer {
   @include flex(column, center);
   background-color: $lightGreen;
   min-height: 4rem;
+} 
+
+.contact-info
+{
+  z-index:9999;
 }
 
 .contact-and-map {

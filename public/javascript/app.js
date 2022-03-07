@@ -52,6 +52,7 @@ menuBtn.addEventListener("click", () => {
     menuList.classList.remove("active-links"); 
     menuCheck = false;
   }
-});
+}); 
+
 
 
