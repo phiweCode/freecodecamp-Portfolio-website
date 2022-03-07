@@ -9,7 +9,8 @@
     height: 20em;
   
 
-  #navbar {
+  #navbar
+  {
     
     @include flex(row, space-between); 
 
@@ -103,7 +104,7 @@
           {
             border: 2px solid $customPink;  
             transform: scale(.9); 
-            color:$customPink; 
+            color:#c4c4c4; 
             transition: all 0.3s ease-in ;
           }
 
@@ -119,7 +120,8 @@
   }
 }
 
-  #welcome-section { 
+  #welcome-section 
+{ 
     
     @include flex(column, center);
     margin: 0vh 0;
@@ -216,9 +218,6 @@
 
 } 
 
-
-
-
 .social-media 
 { 
   position: fixed;  
@@ -226,32 +225,20 @@
   flex-direction: column;
   align-items: start;
   top:48vh;  
-  left:-20vw;
+  left:-2vw;
   z-index: 1000;  
   width:100%;  
 
-  .vertical-line 
-  { position:absolute; 
-    top:21vh; 
-    left:11.5vw;
-    border: 1px solid $lightGreen; 
-    width: 300px;  
-    transform: translateX(500px);
-    transform: rotate(90deg);
-    z-index: -100;
 
-
-  }
-
-
-   .fa-brands {
+   .fa-brands 
+   {
           color: $lightGreen;
           transform: scale(1.3); 
           padding: 1.5vh 0vw;  
           margin: 2px 0;
           z-index: 1000;   
-          background-color: $navyBlueBg;
-           }  
+          background-color: transparent;
+    }  
 
     .fa-brands:hover 
     { 
@@ -629,7 +616,7 @@
          font-weight: 800; 
           cursor: pointer;
              
-             &::after
+             .links::after
          { 
             
           position: absolute;
@@ -645,7 +632,7 @@
           
          } 
 
-          &:hover:after
+          .links:hover:after
          {  
              transform: scale(1,1);
             transition: transform 0.3s ease-in ;
@@ -843,13 +830,92 @@
           height: 100%; 
           border-radius: 5px;  
           z-index: 10;
+      }  
+
+      .first,.second,.third,.fourth 
+      {  
+        position: relative;
+        min-width: 100px;
+        height: 300px;
+        z-index: -999;
+        transition: all .5s ease-in-out;
+        
+        img{ 
+
+          display: none;
+        }
       } 
+
+      .first 
+       { 
+         background: linear-gradient(130deg,#31ED7C95,#df1c4b95 ), url("/images/Documentation\ project.png") no-repeat center center / cover;
+       }
+      .first:hover 
+       { 
+         background: linear-gradient(130deg,#31ED7C00,#df1c4b00 ), url("/images/Documentation\ project.png") no-repeat center center / cover;
+         z-index: 999;
+          border-radius: 10px;
+         border: 2px solid $customPink;
+         transform: translate(2px,-2px);
+         transition: all .2s ease-in-out;
+
+        }
+
+
+
+      .second
+       { 
+         background: linear-gradient(130deg,#31ED7C95,#df1c4b95 ),  url("/images/LandingPage.png") no-repeat center center / cover;
+       }
+      .second:hover
+       { 
+           background: linear-gradient(130deg,#31ED7C00,#df1c4b00 ),  url("/images/LandingPage.png") no-repeat center center / cover;
+             z-index: 999; 
+              border-radius: 10px;
+                 border: 2px solid $customPink;
+         transform: translate(2px,-2px);
+         transition: all .2s ease-in-out;     
+        }
+
+
+      .third
+       { 
+         background: linear-gradient(130deg,#31ED7C95,#df1c4b95 ),  url("/images/Survey\ form\ \(89\).png") no-repeat center center / cover;
+       }
+      .third:hover
+       { 
+         background: linear-gradient(130deg,#31ED7C00,#df1c4b00 ),  url("/images/Survey\ form\ \(89\).png") no-repeat center center / cover;
+           z-index: 999;  
+            border-radius: 10px;
+               border: 2px solid $customPink;
+         transform: translate(2px,-2px);
+         transition: all .2s ease-in-out;
+        }
+
+
+      .fourth
+       { 
+         background: linear-gradient(130deg,#31ED7C95,#df1c4b95 ),  url("/images/tributePg.png") no-repeat center center / cover;
+       }  
+      .fourth:hover
+       { 
+         background: linear-gradient(130deg,#31ED7C00,#df1c4b00 ),  url("/images/tributePg.png") no-repeat center center / cover;
+           z-index: 999;
+           border-radius: 10px;
+               border: 2px solid $customPink;
+         transform: translate(2px,-2px);
+         transition: all .2s ease-in-out;
+        }  
+
+     
+
 
       .first,.third
       { 
         position: absolute; 
         right:25rem; 
-        width: 500px; 
+        width: 500px;  
+
       }
      
 
@@ -860,12 +926,8 @@
         border-radius: 5px;  
         background-color: #070228b6;  
         box-shadow: 0 0 25px black;  
+        transition: all .5s ease-in-out;
 
-        .projectShot
-        { 
-          background: rgb(0, 0, 0)
-
-        }
 
         .project-title  
         {    
@@ -921,7 +983,7 @@
              @include flex(row,space-between); 
              color:$lightGreen;  
                background-color:transparent;
-             transform: scale(1.5); 
+             transform: scale(.98); 
              width:40%; 
              padding:1vh 2vw; 
              z-index: 20; 

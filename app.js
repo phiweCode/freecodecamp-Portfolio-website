@@ -19,19 +19,16 @@ function setUpMap(center)
 {
   var map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/mapbox/streets-v11",
+    style: "mapbox://styles/phiwe1998/ckzr1ox7z00oo14l9xbgote3l",
     center: center,
-    zoom: 13,
+    zoom: 6,
   });
 
   // add zoom and rotation controls to the map
 
   map.addControl(new mapboxgl.NavigationControl()); 
 
-  map.addControl(new MapboxDirections({accessToken: mapboxgl.accessToken
-}),
-'top-left'
-);
+  
 
 }  
 
