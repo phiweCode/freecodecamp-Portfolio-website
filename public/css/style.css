@@ -2272,10 +2272,10 @@
     display: none;
   }
   #Project .projects-container .project-tile .first {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("/public/images/Documentation project.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/Documentation project.png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .first:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("/public/images/Documentation project.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/Documentation project.png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
@@ -2285,10 +2285,10 @@
     transition: all 0.2s ease-in-out;
   }
   #Project .projects-container .project-tile .second {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("/public/images/LandingPage.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/LandingPage.png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .second:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("/public/images/LandingPage.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/LandingPage.png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
@@ -2298,10 +2298,10 @@
     transition: all 0.2s ease-in-out;
   }
   #Project .projects-container .project-tile .third {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("/public/images/Survey form (89).png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/Survey form (89).png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .third:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("/public/images/Survey form (89).png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/Survey form (89).png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
@@ -2311,10 +2311,10 @@
     transition: all 0.2s ease-in-out;
   }
   #Project .projects-container .project-tile .fourth {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("/public/images/tributePg.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/tributePg.png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .fourth:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("/public/images/tributePg.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/tributePg.png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
