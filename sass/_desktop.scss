@@ -715,12 +715,12 @@
 
         .first {
           background: linear-gradient(130deg, #31ed7c95, #df1c4b95),
-            url("./images/Documentation\ project.png") no-repeat center
+            url("/public/images/Documentation\ project.png") no-repeat center
               center / cover;
         }
         .first:hover {
           background: linear-gradient(130deg, #31ed7c00, #df1c4b00),
-            url("./images/Documentation\ project.png") no-repeat center
+            url("/public/images/Documentation\ project.png") no-repeat center
               center / cover;
           z-index: 999;
           border-radius: 10px;
@@ -731,12 +731,12 @@
 
         .second {
           background: linear-gradient(130deg, #31ed7c95, #df1c4b95),
-            url("./images/LandingPage.png") no-repeat center center /
+            url("/public/images/LandingPage.png") no-repeat center center /
               cover;
         }
         .second:hover {
           background: linear-gradient(130deg, #31ed7c00, #df1c4b00),
-            url("./images/LandingPage.png") no-repeat center center /
+            url("/public/images/LandingPage.png") no-repeat center center /
               cover;
           z-index: 999;
           border-radius: 10px;
@@ -747,12 +747,12 @@
 
         .third {
           background: linear-gradient(130deg, #31ed7c95, #df1c4b95),
-            url("./images/Survey\ form\ \(89\).png") no-repeat center
+            url("/public/images/Survey\ form\ \(89\).png") no-repeat center
               center / cover;
         }
         .third:hover {
           background: linear-gradient(130deg, #31ed7c00, #df1c4b00),
-            url("./images/Survey\ form\ \(89\).png") no-repeat center
+            url("/public/images/Survey\ form\ \(89\).png") no-repeat center
               center / cover;
           z-index: 999;
           border-radius: 10px;
@@ -763,11 +763,11 @@
 
         .fourth {
           background: linear-gradient(130deg, #31ed7c95, #df1c4b95),
-            url("./images/tributePg.png") no-repeat center center / cover;
+            url("/public/images/tributePg.png") no-repeat center center / cover;
         }
         .fourth:hover {
           background: linear-gradient(130deg, #31ed7c00, #df1c4b00),
-            url("./images/tributePg.png") no-repeat center center / cover;
+            url("/public/images/tributePg.png") no-repeat center center / cover;
           z-index: 999;
           border-radius: 10px;
           border: 2px solid $customPink;
