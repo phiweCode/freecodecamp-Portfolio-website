@@ -1,194 +1,155 @@
-@import 'mobile'; 
-@import 'tablet'; 
-@import 'desktop'; 
-@import 'config'; 
+@import "mobile";
+@import "tablet";
+@import "desktop";
+@import "config";
 
-*, *::before ,*::after
-{
-    margin:0; 
-    padding:0; 
-    box-sizing: border-box; 
-}  
-
-html 
-{ 
-    background-color: $navyBlueBg; 
-    width:100vw; 
-    @include flex(column,center)
-} 
-
-body 
-{ 
-
- color: #ffffff;  
- font-family: $fontStack;  
- line-height: 1.5rem;
- font-size:14px;
-
-
-}    
-
-a { 
-    text-decoration: none;
-    color:#ffffff;
-} 
-
-li 
-{ 
-    list-style: none;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header 
-{ 
-    position:fixed;  
-    top:0rem; 
-    left:0;
-    background-color: $navyBlueBg;
-    width:100vw; 
-    height: 10vh;
-    padding: 2vh 6vw;
-    z-index: 10000;
+html {
+  background-color: $navyBlueBg;
+  width: 100vw;
+  @include flex(column, center);
 }
 
-#main-section 
-{ 
-    @include flex(column,center);
+body {
+  color: #ffffff;
+  font-family: $fontStack;
+  line-height: 1.5rem;
+  font-size: 14px;
 }
 
-.name 
-{ 
-    color:$lightGreen; 
-} 
+a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
 
-.webDev
-{ 
-    color: $customPink; 
-    font-weight:900;  
-    
-} 
+li {
+  list-style: none;
+}
 
-.freeLance 
-{ 
-    color:$lightGreen; 
-    font-weight:900; 
-   
-}  
+header {
+  position: fixed;
+  top: 0rem;
+  left: 0;
+  background-color: $navyBlueBg;
+  width: 100vw;
+  height: 10vh;
+  padding: 2vh 6vw;
+  z-index: 10000;
+}
 
-.transparent-bg 
- {
-     background-color: #c4c4c410; 
-     box-shadow: 0 0 5px rgba(0, 0, 0, 0.349);
- } 
+#main-section {
+  @include flex(column, center);
+}
 
- img 
- { 
-     max-width: 100%;
- }    
+.name {
+  color: $lightGreen;
+}
 
- 
+.webDev {
+  color: $customPink;
+  font-weight: 900;
+}
 
+.freeLance {
+  color: $lightGreen;
+  font-weight: 900;
+}
 
- ::placeholder 
- { 
-     color:#c4c4c4;
-     font-family: $fontStack;
- } 
+.transparent-bg {
+  background-color: #c4c4c410;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.349);
+}
 
- ::-ms-input-placeholder
- { 
-     color:#c4c4c4;
-     font-family: $fontStack;
- } 
+img {
+  max-width: 100%;
+}
 
- footer 
- {
-     @include flex(column,center); 
-     background-color: $lightGreen;
-     min-height: 4rem;
- } 
+::placeholder {
+  color: #c4c4c4;
+  font-family: $fontStack;
+}
 
- .contact-and-map
-  {  
-      @include flex(column,center);
-      width:100%;
-  } 
+::-ms-input-placeholder {
+  color: #c4c4c4;
+  font-family: $fontStack;
+}
 
-  
- .menu-container 
- { 
-     position: relative; 
-     @include flex(column,center) ;
-     overflow: hidden; 
-     width: 60px;  
-     height: 40px;
-     cursor: pointer; 
-     transition: all .5s ease-in-out; 
+.email,
+.subject {
+  z-index: 999;
+}
 
-      .ham 
-      { 
-          
-          width: 25px; 
-          height: 3px; 
-          background-color: $lightGreen; 
+footer {
+  @include flex(column, center);
+  background-color: $lightGreen;
+  min-height: 4rem;
+}
 
-          border-radius: 5px;  
-          pointer-events: none;
-          transition: all .4s ease-in-out; 
-      } 
+.contact-and-map {
+  @include flex(column, center);
+  width: 100%;
+}
 
-      .ham::after , .ham::before 
-      { 
-          content: ""; 
-          position: absolute;  
-          pointer-events: none;
-          width: 25px; 
-          height: 3px; 
-          background-color: $lightGreen; 
-         
-          border-radius: 5px; 
-          transition: all .4s ease-in-out; 
-    
-      } 
+.menu-container {
+  position: relative;
+  @include flex(column, center);
+  overflow: hidden;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 
-      .ham::after
-      { 
-          transform: translateY(-8px);
-      }
-      .ham::before
-      { 
-          transform: translateY(8px);
-      } 
+  .ham {
+    width: 25px;
+    height: 3px;
+    background-color: $lightGreen;
 
-      // animations for the ham menu 
+    border-radius: 5px;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+  }
 
+  .ham::after,
+  .ham::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    width: 25px;
+    height: 3px;
+    background-color: $lightGreen;
 
- } 
-  .open
-  { 
-     .ham 
-       { 
-           transform: rotate(360deg) translateX(-40px);
-           background-color: transparent;
-       } 
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+  }
 
-       
-      .ham::before 
-       {   
-           transform: rotate(45deg)  translate(30px,-30px);
-       }
+  .ham::after {
+    transform: translateY(-8px);
+  }
+  .ham::before {
+    transform: translateY(8px);
+  }
 
-      .ham::after
-       {    
-           transform: rotate(-45deg)  translate(30px,30px);
-       }
-    }
+  // animations for the ham menu
+}
+.open {
+  .ham {
+    transform: rotate(360deg) translateX(-40px);
+    background-color: transparent;
+  }
 
- 
- 
+  .ham::before {
+    transform: rotate(45deg) translate(30px, -30px);
+  }
 
-
-              
-
-
-
-
+  .ham::after {
+    transform: rotate(-45deg) translate(30px, 30px);
+  }
+}

@@ -1,21 +1,17 @@
+// variables
 
-// variables 
+$navyBlueBg: #070228;
+$lightGreen: #31ed7c;
+$customPink: #df1c4b;
+$textColor: #c4c4c4;
+$fontStack: "Montserrat", sans-serif;
+$trasparentGraybg: rgba(196, 196, 196, 0.02);
 
-$navyBlueBg : #070228;  
-$lightGreen : #31ED7C; 
-$customPink : #df1c4b;  
-$textColor: #c4c4c4; 
-$fontStack :  'Montserrat', sans-serif;
-$trasparentGraybg : rgba(196, 196, 196, 0.02); 
+// mixins
 
-// mixins 
-
-@mixin flex($flexDirection,$justiification) 
-{ 
-
-    display:flex; 
-    flex-direction: $flexDirection;
-    align-items: center;
-    justify-content: $justiification;
-    
+@mixin flex($flexDirection, $justiification) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: center;
+  justify-content: $justiification;
 }

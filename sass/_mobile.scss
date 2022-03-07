@@ -1,221 +1,180 @@
 @import "config";
 
 @media screen and (max-width: 499px) {
- 
-  // The styles below are for the nav menu 
- 
-  header { 
+  // The styles below are for the nav menu
 
+  header {
     padding: 10px 0;
     width: 100%;
-    height: 5em; 
+    height: 5em;
 
-    #navbar 
-    { 
+    #navbar {
+      position: relative;
+      @include flex(row, space-between);
 
-      position:relative; 
-      @include flex(row, space-between); 
+      #nav-menu {
+        position: absolute;
+        background-color: $lightGreen;
+        height: 0px;
+        width: 0px;
+        right: 0px;
+        border-radius: 5px;
 
-    #nav-menu {
-
-      position: absolute;
-      background-color: $lightGreen;
-      height: 0px;
-      width: 0px;
-      right: 0px;
-      border-radius: 5px; 
-
-      
-    .page-links { 
-      
-      position: absolute;
-      height: fit-content;
-      text-align: center;
-      width: 20vw;
-      top:4vh; 
-      right:-1.8rem;  
-      background-color: $navyBlueBg; 
-      width:30vw;
-      z-index: 99999;
-      transform: translateX(40vw);
-      transition: all .2s ease-in-out;
-                
-          .links 
-          {  
-            position: relative; 
-            padding:0.8rem 0; 
-            color:$lightGreen; 
-            font-weight: 800;  
-            cursor: pointer; 
-
-         &::after
-         { 
-            
+        .page-links {
           position: absolute;
-            content: ""; 
-            bottom:0; 
-            left:25px;
-            width:60%; 
-            align-self: center;
-            height: 2px;
-            background-color: $lightGreen; 
-            transform: scale(0,1);
-            transition: transform 0.3s ease-in ;
-          
-         } 
+          height: fit-content;
+          text-align: center;
+          width: 20vw;
+          top: 4vh;
+          right: -1.8rem;
+          background-color: $navyBlueBg;
+          width: 30vw;
+          z-index: 99999;
+          transform: translateX(40vw);
+          transition: all 0.2s ease-in-out;
 
-          &:hover:after
-         {  
-             transform: scale(1,1);
-            transition: transform 0.3s ease-in ;
-         }
+          .links {
+            position: relative;
+            padding: 0.8rem 0;
+            color: $lightGreen;
+            font-weight: 800;
+            cursor: pointer;
 
-          }  
+            &::after {
+              position: absolute;
+              content: "";
+              bottom: 0;
+              left: 25px;
+              width: 60%;
+              align-self: center;
+              height: 2px;
+              background-color: $lightGreen;
+              transform: scale(0, 1);
+              transition: transform 0.3s ease-in;
+            }
 
-         
-      }   
+            &:hover:after {
+              transform: scale(1, 1);
+              transition: transform 0.3s ease-in;
+            }
+          }
+        }
 
-      .active-links
-      { 
-           transform: translateX(0vw);
-           transition: all .2s ease-in-out;  
+        .active-links {
+          transform: translateX(0vw);
+          transition: all 0.2s ease-in-out;
+        }
       }
-    }    
-
+    }
   }
 
-} 
-
-  // end of the nav menu 
-
-
+  // end of the nav menu
 
   #welcome-section {
     @include flex(column, center);
     margin: 15vh 0;
     text-align: center;
-    width:100vw;
-  
+    width: 100vw;
 
-  .introduction {
-    text-align: center;
+    .introduction {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2em;
+      font-size: 14px;
+      line-height: 1.6rem;
+      width: 80%;
+
+      .params2 {
+        font-size: 1.6rem;
+        margin: 2vh 0;
+
+        .webDev {
+          display: block;
+        }
+      }
+    }
+
+    .Get-In-Touch {
+      background-color: transparent;
+      border: $lightGreen solid 2px;
+      font-family: $fontStack;
+      color: #ffffff;
+      font-size: 14px;
+      padding: 5px 20px;
+      border-radius: 10px;
+    }
+
+    .Get-In-Touch:hover {
+      border: 2px solid $customPink;
+      transform: scale(0.9);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .moon {
+      position: absolute;
+      top: 55vh;
+      right: 70vw;
+      transform: scale(0.98);
+    }
+
+    .waves {
+      width: 100%;
+
+      .starts-mobile,
+      .waves-mobile {
+        width: 100vw;
+      }
+
+      .stars-tablet,
+      .waves-tablet {
+        display: none;
+        overflow: hidden;
+        height: 0;
+        width: 0;
+      }
+
+      .waves-desktop,
+      .stars-desktop {
+        display: none;
+        overflow: hidden;
+        height: 0;
+        width: 0;
+      }
+    }
+  }
+
+  .social-media {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 80vh;
+    left: 10vw;
+    z-index: 1000;
     width: 100%;
-    margin-bottom: 2em;
-    font-size: 14px;
-    line-height: 1.6rem; 
-    width:80%;
 
-    .params2 
-  { 
-    font-size: 1.6rem;  
-    margin:2vh 0;  
-
-    .webDev
-    { 
-      display:block; 
-    }
-  }
-
-  } 
-
-  
-
-  .Get-In-Touch {
-    background-color: transparent;
-    border: $lightGreen solid 2px; 
-    font-family:  $fontStack;
-    color: #ffffff;
-    font-size: 14px;
-    padding: 5px 20px;
-    border-radius: 10px;
-  } 
-
-   .Get-In-Touch:hover 
-  {
-     border: 2px solid $customPink;   
-     transform: scale(.9);
-     transition: all .3s ease-in-out;
-  }
-
-  .moon {
-    position: absolute;
-    top: 55vh;
-    right: 70vw;
-    transform: scale(0.98);
-  } 
-
-    .waves 
-   {  width: 100%; 
-  
-       .starts-mobile, .waves-mobile
-       { 
-        width:100vw;
-       }  
-
-       .stars-tablet, .waves-tablet 
-       {
-          
-           display: none; 
-           overflow: hidden; 
-           height: 0;
-           width:0;
-
-       } 
-
-         .waves-desktop,.stars-desktop
-       { 
-           
-           display: none; 
-           overflow: hidden; 
-           height: 0;
-           width:0;
-
-       }
-
-    
-   } 
-
-  } 
-
-  .social-media 
-{ 
-  position: fixed;  
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  top:80vh;  
-  left:10vw;
-  z-index: 1000;  
-  width:100%;  
-
- 
-    .fa-paper-plane 
-    { 
-      color:$lightGreen; 
-      transform: scale(2.3); 
+    .fa-paper-plane {
+      color: $lightGreen;
+      transform: scale(2.3);
     }
 
-   .fa-brands {
-          color: $lightGreen;
-          transform: scale(2.3); 
-          padding: 1.5vh 2vw;  
-          margin: 2px 0;
-          z-index: 1000;   
-          background-color: transparent;
-           }  
+    .fa-brands {
+      color: $lightGreen;
+      transform: scale(2.3);
+      padding: 1.5vh 2vw;
+      margin: 2px 0;
+      z-index: 1000;
+      background-color: transparent;
+    }
 
-    .fa-brands:hover 
-    { 
-      border: 1px solid $lightGreen;  
+    .fa-brands:hover {
+      border: 1px solid $lightGreen;
       border-radius: 5px;
       transform: translateX(-20px);
-      transition: all .2s ease-in; 
-       padding: 1.5vh 1.5vw;  
-    
+      transition: all 0.2s ease-in;
+      padding: 1.5vh 1.5vw;
     }
-
-
-}
+  }
 
   section {
     @include flex(column, center);
@@ -245,7 +204,6 @@
       text-align: center;
       line-height: 25px;
       border-radius: 10px;
-      
 
       .params1 {
         font-size: 14px;
@@ -260,7 +218,7 @@
     .transparent-bg {
       @include flex(column, center);
       border-radius: 10px;
-      height:11rem;
+      height: 11rem;
       width: 100%;
 
       .skills-icons {
@@ -278,180 +236,146 @@
         }
       }
     }
-  } 
-    
-  
-  .project-tile 
-  { 
-      margin-bottom: 5vh;  
-
-      .transparent-bg 
-      {  @include flex(column,center); 
-        padding-top: 3vh;
-        border-radius: 20px; 
-       
-
-        .project-title  
-        { 
-            color:$lightGreen; 
-            text-align: center;
-            padding:1.8vh 0;
-        } 
-
-        .params1
-        { 
-            text-align: center;
-            margin-bottom:2vh;
-            width:80%;
-        } 
-
-        .separator 
-        { 
-            width:60%;
-            margin-bottom:2vh; 
-        } 
-
-        .skills-icons
-         { 
-             @include flex(row,space-between); 
-             width:90%;
-             color:$lightGreen;  
-             transform: scale(1.5); 
-             width:60%; 
-             padding:4vh 0;
-
-
-             .icons-list
-             {
-                display:grid; 
-                grid-template-columns: repeat(4,1fr);
-                align-items: center;
-                justify-items: center;
-                grid-gap:8px;
-         
-                 
-             }
-
-         }
-      }
-  } 
-
-  #email-form 
-  {  
-      @include flex(column,center);
-      .transparent-bg 
-      { 
-          padding: 8vh 5vw;  
-          width:100%;
-          border-radius: 10px;
-         
-
-
-          form 
-          { 
-          display:grid; 
-          grid-template-rows: 1fr 1fr ;
-          align-items:center; 
-          justify-items: end; 
-          width:100%;
-   
-          }
-
-          .names 
-           {   
-               @include flex(row,center);
-        
-           } 
-
-           .email,.subject,.names  
-            {   width:100%;
-                input{ 
-                width:100%; 
-                } 
-            }  
-
-
-            textarea 
-             { 
-     
-                width:100%;
-             } 
-
-             input,textarea,.send 
-             { 
-                margin-bottom: 1em;  
-                background-color: transparent;
-                padding:.3rem .9em;
-                outline:none; 
-                border: $lightGreen solid 2px;
-                border-radius: 15px;
-                color: #ffffff; 
-                z-index: 10000;                
-             } 
-
-             #send 
-             {
-                 min-width:100px;
-             } 
-
-             .send 
-             {
-                 min-width:100px;
-                 align-self: end;
-                 color:#c4c4c4;
-                 font-family: $fontStack; 
-                 cursor: pointer; 
-             } 
-
-             .send:hover 
-              { 
-                border: 2px solid $customPink; 
-                transform: scale(.9); 
-                transition: all .3s ease-in-out; 
-              } 
-
-               input:focus ,textarea:focus 
-                { 
-                    border: 2px solid $customPink; 
-                }
-
-      } 
-         
-      .contact-info{  
-       
-        @include flex(column,center);
-        margin: 2rem 0; 
-        width:100%;  
-        
-
-      .email-contact, .cell-phone, .linkedIn
-      {   @include flex(column,center);
-           width: 100%; 
-
-          .transparent-bg 
-           {   
-               
-                @include flex(row,start);
-                padding: 1rem 1em;
-                margin: 1rem 0; 
-                border-radius: 10px;
-
-                .fa-solid, .fa-brands 
-                { 
-                    color:$lightGreen; 
-                    transform: scale(1.5);
-                    margin-right: 2em;
-                }
-            
-           }
-
-      } 
-    }
-
-
-
   }
 
+  .project-tile {
+    margin-bottom: 5vh;
 
+    .transparent-bg {
+      @include flex(column, center);
+      padding-top: 3vh;
+      border-radius: 20px;
 
+      .project-title {
+        color: $lightGreen;
+        text-align: center;
+        padding: 1.8vh 0;
+      }
+
+      .params1 {
+        text-align: center;
+        margin-bottom: 2vh;
+        width: 80%;
+      }
+
+      .separator {
+        width: 60%;
+        margin-bottom: 2vh;
+      }
+
+      .skills-icons {
+        @include flex(row, space-between);
+        width: 90%;
+        color: $lightGreen;
+        transform: scale(1.5);
+        width: 60%;
+        padding: 4vh 0;
+
+        .icons-list {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          align-items: center;
+          justify-items: center;
+          grid-gap: 8px;
+        }
+      }
+    }
+  }
+
+  #email-form {
+    @include flex(column, center);
+    .transparent-bg {
+      padding: 8vh 5vw;
+      width: 100%;
+      border-radius: 10px;
+
+      form {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: end;
+        width: 100%;
+      }
+
+      .names {
+        @include flex(row, center);
+      }
+
+      .email,
+      .subject,
+      .names {
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+
+      textarea {
+        width: 100%;
+      }
+
+      input,
+      textarea,
+      .send {
+        margin-bottom: 1em;
+        background-color: transparent;
+        padding: 0.3rem 0.9em;
+        outline: none;
+        border: $lightGreen solid 2px;
+        border-radius: 15px;
+        color: #ffffff;
+        z-index: 10000;
+      }
+
+      #send {
+        min-width: 100px;
+      }
+
+      .send {
+        min-width: 100px;
+        align-self: end;
+        color: #c4c4c4;
+        font-family: $fontStack;
+        cursor: pointer;
+      }
+
+      .send:hover {
+        border: 2px solid $customPink;
+        transform: scale(0.9);
+        transition: all 0.3s ease-in-out;
+      }
+
+      input:focus,
+      textarea:focus {
+        border: 2px solid $customPink;
+      }
+    }
+
+    .contact-info {
+      @include flex(column, center);
+      margin: 2rem 0;
+      width: 100%;
+
+      .email-contact,
+      .cell-phone,
+      .linkedIn {
+        @include flex(column, center);
+        width: 100%;
+
+        .transparent-bg {
+          @include flex(row, start);
+          padding: 1rem 1em;
+          margin: 1rem 0;
+          border-radius: 10px;
+
+          .fa-solid,
+          .fa-brands {
+            color: $lightGreen;
+            transform: scale(1.5);
+            margin-right: 2em;
+          }
+        }
+      }
+    }
+  }
 }
