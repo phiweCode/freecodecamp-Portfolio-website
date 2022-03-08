@@ -379,7 +379,7 @@
                     <div class="transparent-bg">
 
                         <div class="projectShot first">
-                            <img src="./images/Documentation project.png" alt="">
+                            <img src="./images/Screenshot (91).png" alt="">
                         </div>
 
 
@@ -677,7 +677,7 @@
 
                         <div class="resume">
                             <div class="transparent-bg">
-                                <a href="/-Thabo_Siphiwe_Mngoma's_CV.pdf" download="My resume"><i class="fa-solid fa-image-portrait"></i> <span>My resume</span></a>
+                                <a href="/public/-Thabo_Siphiwe_Mngoma's_CV.pdf" download="My resume"><i class="fa-solid fa-image-portrait"></i> <span>My resume</span></a>
                             </div>
                         </div>
                         <div class="cell-phone">
@@ -733,22 +733,19 @@
             
             $("a").on('click', function(event) {
 
-            
-            if (this.hash !== "") {
+            if (this.hash !== "") 
+            {
             
             event.preventDefault();
-
-         
             var hash = this.hash;
 
-    
             $('html, body').animate({
             scrollTop: $(hash).offset().top
-            }, 900, function(){
-
-           
+            }, 900, function()
+            {
             window.location.hash = hash;
             });
+
             } 
             });
             });
