@@ -108,7 +108,8 @@
       width: 100%;
       margin-bottom: 2em;
       font-size: 13px;
-      line-height: 1.5rem;
+      line-height: 1.5rem; 
+      font-weight: 500;
     }
 
     .params2 {
@@ -118,14 +119,18 @@
     }
 
     .Get-In-Touch {
+      position: absolute;
+      left:30vw;  
+      top:30vh;
       background-color: transparent;
       border: $lightGreen solid 2px;
-      font-family: "montserrat";
-      color: #ffffff;
-      font-size: 14px;
+      font-family: $fontStack;
+      font-weight: 800;
+      color: #c4c4c4; 
+      font-size: 20px;
       padding: 2px 3vw;
       border-radius: 8px;
-      align-self: start;
+      align-self: center;
       cursor: pointer;
     }
 
@@ -559,14 +564,18 @@
     }
 
     .Get-In-Touch {
+      position: absolute;
       background-color: transparent;
       border: $lightGreen solid 2px;
-      font-family: "montserrat";
+      font-family: $fontStack;
       color: #ffffff;
       font-size: 18px;
       padding: 2px 3vw;
       border-radius: 8px;
       align-self: start;
+      color: #c4c4c4; 
+      z-index: 99999999;
+      cursor: pointer;
     }
 
     .moon {
@@ -715,13 +724,13 @@
 
         .first {
           background: linear-gradient(130deg, #31ed7c95, #df1c4b95),
-            url("../public/images/Screenshot\ \(91\).png") no-repeat center
-              center / cover;
+            url("../images/Screenshot\ \(91\).png") no-repeat center center /
+              cover;
         }
         .first:hover {
           background: linear-gradient(130deg, #31ed7c00, #df1c4b00),
-            url("../public/images/Screenshot\ \(91\).png") no-repeat center
-              center / cover;
+            url("../images/Screenshot\ \(91\).png") no-repeat center center /
+              cover;
           z-index: 999;
           border-radius: 10px;
           border: 2px solid $customPink;
@@ -731,13 +740,11 @@
 
         .second {
           background: linear-gradient(130deg, #31ed7c95, #df1c4b95),
-            url("../images/LandingPage.png") no-repeat center center /
-              cover;
+            url("../images/LandingPage.png") no-repeat center center / cover;
         }
         .second:hover {
           background: linear-gradient(130deg, #31ed7c00, #df1c4b00),
-            url("../images/LandingPage.png") no-repeat center center /
-              cover;
+            url("../images/LandingPage.png") no-repeat center center / cover;
           z-index: 999;
           border-radius: 10px;
           border: 2px solid $customPink;
@@ -747,13 +754,13 @@
 
         .third {
           background: linear-gradient(130deg, #31ed7c95, #df1c4b95),
-            url("../images/Survey\ form\ \(89\).png") no-repeat center
-              center / cover;
+            url("../images/Survey\ form\ \(89\).png") no-repeat center center /
+              cover;
         }
         .third:hover {
           background: linear-gradient(130deg, #31ed7c00, #df1c4b00),
-            url("../images/Survey\ form\ \(89\).png") no-repeat center
-              center / cover;
+            url("../images/Survey\ form\ \(89\).png") no-repeat center center /
+              cover;
           z-index: 999;
           border-radius: 10px;
           border: 2px solid $customPink;

@@ -169,17 +169,37 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    top: 88vh;
+    top: 82vh;
     left: 30px;
-    z-index: 1000;
-    width: 100%;
+    z-index: 1000; 
+    width:40%;
+   
+    
 
     .fa-paper-plane {
       color: $lightGreen;
       transform: scale(2.3);
+      cursor: pointer;
+    } 
+
+    .socials-icons
+    {  
+
+      position: absolute;
+      visibility: hidden;
+     
+
+    } 
+
+    .mobile 
+    {
+      position: relative;
+      visibility: visible;      
+      transition: all .5s ease-in-out;
     }
 
-    .fa-brands {
+    .fa-brands { 
+     
       color: $lightGreen;
       transform: scale(1.3);
       padding: 1.5vh 1vw;
@@ -416,7 +436,7 @@
       justify-self: end;
       height: 100%;
 
-      .email-contact,
+      .resume,
       .cell-phone,
       .linkedIn {
         @include flex(column, center);
