@@ -166,22 +166,33 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: center;
+            flex-direction: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     top: 80vh;
     left: 10vw;
     z-index: 1000;
-    width: 100%;
+    width: 10%;
   }
   .social-media .fa-paper-plane {
     color: #31ed7c;
     -webkit-transform: scale(2.3);
             transform: scale(2.3);
+    cursor: pointer;
+  }
+  .social-media .socials-icons {
+    position: absolute;
+    visibility: hidden;
+  }
+  .social-media .mobile {
+    position: relative;
+    visibility: visible;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
   .social-media .fa-brands {
     color: #31ed7c;
