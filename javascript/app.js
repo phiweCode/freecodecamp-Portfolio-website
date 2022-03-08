@@ -52,7 +52,21 @@ menuBtn.addEventListener("click", () => {
     menuList.classList.remove("active-links"); 
     menuCheck = false;
   }
-}); 
+});  
+
+//socials floating icons 
+
+const floatingIcons = document.querySelectorAll(".socials-icons");
+const paperPlane = document.querySelector(".fa-paper-plane");
+ 
+paperPlane.addEventListener("click", ()=>
+  {
+    floatingIcons.forEach(elem=>
+      {
+        elem.classList.toggle("mobile"); 
+      })
+  }
+)
 
 
 
