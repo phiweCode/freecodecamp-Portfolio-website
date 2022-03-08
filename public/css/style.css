@@ -2535,7 +2535,7 @@
     justify-self: end;
     height: 100%;
   }
-  #email-form .contact-info .email-contact,
+  #email-form .contact-info .resume,
   #email-form .contact-info .cell-phone,
   #email-form .contact-info .linkedIn {
     display: -webkit-box;
@@ -2554,7 +2554,7 @@
     width: 100%;
     margin-bottom: 2vh;
   }
-  #email-form .contact-info .email-contact .transparent-bg,
+  #email-form .contact-info .resume .transparent-bg,
   #email-form .contact-info .cell-phone .transparent-bg,
   #email-form .contact-info .linkedIn .transparent-bg {
     display: -webkit-box;
@@ -2575,8 +2575,8 @@
     border-radius: 10px;
     overflow: hidden;
   }
-  #email-form .contact-info .email-contact .transparent-bg .fa-solid,
-  #email-form .contact-info .email-contact .transparent-bg .fa-brands,
+  #email-form .contact-info .resume .transparent-bg .fa-solid,
+  #email-form .contact-info .resume .transparent-bg .fa-brands,
   #email-form .contact-info .cell-phone .transparent-bg .fa-solid,
   #email-form .contact-info .cell-phone .transparent-bg .fa-brands,
   #email-form .contact-info .linkedIn .transparent-bg .fa-solid,
@@ -2586,7 +2586,7 @@
             transform: scale(1.5);
     margin-right: 1em;
   }
-  #email-form .contact-info .email-contact .transparent-bg span,
+  #email-form .contact-info .resume .transparent-bg span,
   #email-form .contact-info .cell-phone .transparent-bg span,
   #email-form .contact-info .linkedIn .transparent-bg span {
     color: #c4c4c4;
@@ -2641,6 +2641,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+  width: 100%;
 }
 
 li {
@@ -2860,4 +2861,5 @@ footer {
 .external-links i {
   color: #31ed7c;
   z-index: 9999;
+  cursor: pointer;
 }

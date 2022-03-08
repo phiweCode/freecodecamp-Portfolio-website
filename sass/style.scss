@@ -28,6 +28,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+  width:100%;
 }
 
 li {
@@ -162,10 +163,14 @@ footer {
 .external-links
 { @include flex(row, space-between); 
   min-width: 3vw;
+
   z-index:9999; 
   i
   { 
     color: $lightGreen;
     z-index:9999; 
+    cursor: pointer;
   }
+
+  
 }
