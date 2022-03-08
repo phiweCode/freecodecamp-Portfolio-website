@@ -157,4 +157,15 @@ footer {
   .ham::after {
     transform: rotate(-45deg) translate(30px, 30px);
   }
+} 
+
+.external-links
+{ @include flex(row, space-between); 
+  min-width: 3vw;
+  z-index:9999; 
+  i
+  { 
+    color: $lightGreen;
+    z-index:9999; 
+  }
 }
