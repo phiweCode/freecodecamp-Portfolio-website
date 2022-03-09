@@ -146,16 +146,30 @@
   .social-media {
     position: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: center;
     align-items: center;
     top: 80vh;
     left: 10vw;
     z-index: 1000;
-    width: 100%;
-
+    width: 10%;
+    
     .fa-paper-plane {
       color: $lightGreen;
       transform: scale(2.3);
+      cursor: pointer;
+    } 
+
+    .socials-icons
+    {  
+      position: absolute;
+      visibility: hidden;
+    } 
+
+    .mobile 
+    {
+      position: relative;
+      visibility: visible;      
+      transition: all .5s ease-in-out;
     }
 
     .fa-brands {

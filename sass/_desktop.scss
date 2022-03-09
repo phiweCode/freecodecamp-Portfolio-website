@@ -190,8 +190,27 @@
     align-items: start;
     top: 48vh;
     left: -2vw;
-    z-index: 1000;
-    width: 100%;
+    z-index: 10;
+    width: 10%; 
+
+    a
+    { 
+      width: fit-content;
+    }
+
+    .fa-paper-plane { 
+        
+      display: none;
+    }
+
+      .socials-icons
+    {  
+
+      position: relative;
+      visibility: visible;
+     
+
+    } 
 
     .fa-brands {
       color: $lightGreen;
@@ -199,6 +218,7 @@
       padding: 1.5vh 0vw;
       margin: 2px 0;
       z-index: 1000;
+      width: fit-content;
       background-color: transparent;
     }
 
@@ -332,14 +352,15 @@
             transform: scale(1.5);
             width: 60%;
             padding: 4vh 0;
-            z-index: 20;
+            z-index: 9999999;
 
             .icons-list {
               display: grid;
               grid-template-columns: repeat(4, 1fr);
               align-items: center;
               justify-items: center;
-              grid-gap: 8px;
+              grid-gap: 8px; 
+               z-index: 9999999;
             }
           }
         }
