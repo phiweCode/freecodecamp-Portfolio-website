@@ -7,7 +7,7 @@
     height: 20em;
 
     #navbar {
-      @include flex(row, space-between);
+      @include flex(row, space-around);
 
       .menu-container {
         display: none;
@@ -29,7 +29,6 @@
           height: fit-content;
           @include flex(row, center);
           text-align: center;
-          width: 10vw;
           padding: 0;
           border-radius: 10px;
           top: -2vh;
@@ -37,7 +36,7 @@
           background-color: transparent;
           border: 1px solid $customPink;
           border: none;
-          width: 60vw;
+          width: 80vw;
           visibility: visible;
           transform: translateX(0vw);
           transition: all 0.4s ease-in-out;
@@ -73,9 +72,11 @@
           }
 
           .contacts {
+            display: inline;
             border: 2px solid $lightGreen;
             border-radius: 5px;
             padding: 0.2vh 2vh;
+            width: 20vw !important;
           }
 
           .contacts:hover {
@@ -108,7 +109,7 @@
       width: 100%;
       margin-bottom: 2em;
       font-size: 13px;
-      line-height: 1.5rem; 
+      line-height: 1.5rem;
       font-weight: 500;
     }
 
@@ -120,13 +121,13 @@
 
     .Get-In-Touch {
       position: absolute;
-      left:30vw;  
+      left:30vw;
       top:30vh;
       background-color: transparent;
       border: $lightGreen solid 2px;
       font-family: $fontStack;
       font-weight: 800;
-      color: #c4c4c4; 
+      color: #c4c4c4;
       font-size: 20px;
       padding: 2px 3vw;
       border-radius: 8px;
@@ -191,26 +192,26 @@
     top: 48vh;
     left: -2vw;
     z-index: 10;
-    width: 10%; 
+    width: 10%;
 
     a
-    { 
+    {
       width: fit-content;
     }
 
-    .fa-paper-plane { 
-        
+    .fa-paper-plane {
+
       display: none;
     }
 
       .socials-icons
-    {  
+    {
 
       position: relative;
       visibility: visible;
-     
 
-    } 
+
+    }
 
     .fa-brands {
       color: $lightGreen;
@@ -359,7 +360,7 @@
               grid-template-columns: repeat(4, 1fr);
               align-items: center;
               justify-items: center;
-              grid-gap: 8px; 
+              grid-gap: 8px;
                z-index: 9999999;
             }
           }
@@ -594,7 +595,7 @@
       padding: 2px 3vw;
       border-radius: 8px;
       align-self: start;
-      color: #c4c4c4; 
+      color: #c4c4c4;
       z-index: 99999999;
       cursor: pointer;
     }
