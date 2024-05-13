@@ -59,7 +59,6 @@
     left: 25px;
     width: 60%;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
     height: 2px;
     background-color: #31ed7c;
@@ -191,8 +190,8 @@
   .social-media .mobile {
     position: relative;
     visibility: visible;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .social-media .fa-brands {
     color: #31ed7c;
@@ -312,10 +311,8 @@
     width: 100%;
   }
   #skill-set .transparent-bg .skills-icons {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -387,10 +384,8 @@
     padding: 4vh 0;
   }
   .project-tile .transparent-bg .skills-icons .icons-list {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -418,10 +413,8 @@
     border-radius: 10px;
   }
   #email-form .transparent-bg form {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -474,7 +467,6 @@
   #email-form .transparent-bg .send {
     min-width: 100px;
     -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
         align-self: end;
     color: #c4c4c4;
     font-family: "Montserrat", sans-serif;
@@ -558,7 +550,6 @@
     margin-right: 2em;
   }
 }
-
 @media screen and (min-width: 500px) {
   header {
     position: relative;
@@ -641,7 +632,6 @@
     left: 2;
     width: 60px;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
     height: 2px;
     background-color: #31ed7c;
@@ -714,7 +704,6 @@
     padding: 2px 6vw;
     border-radius: 8px;
     -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
         align-self: start;
   }
   #welcome-section .Get-In-Touch:hover {
@@ -789,8 +778,8 @@
   .social-media .mobile {
     position: relative;
     visibility: visible;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .social-media .fa-brands {
     color: #31ed7c;
@@ -911,10 +900,8 @@
     width: 95%;
   }
   #skill-set .transparent-bg .skills-icons {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -931,12 +918,10 @@
             transform: scale(3.2);
   }
   #Project .projects-container {
-    background-color: #c4c4c41f;
+    background-color: rgba(196, 196, 196, 0.1215686275);
     padding: 6vh 3vw;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -950,7 +935,7 @@
   }
   #Project .projects-container .project-tile .projectCover {
     position: absolute;
-    background-color: #070228b6;
+    background-color: rgba(7, 2, 40, 0.7137254902);
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -972,7 +957,7 @@
             justify-content: center;
     padding-top: 3vh;
     border-radius: 20px;
-    background-color: #070228b6;
+    background-color: rgba(7, 2, 40, 0.7137254902);
     -webkit-box-shadow: 0 0 25px black;
             box-shadow: 0 0 25px black;
   }
@@ -984,7 +969,7 @@
     padding: 1.8vh 0;
     z-index: 20;
     font-size: 20px;
-    background-color: #00000050;
+    background-color: rgba(0, 0, 0, 0.3137254902);
     padding: 2vh 2vw;
   }
   #Project .projects-container .project-tile .transparent-bg .params1 {
@@ -1022,10 +1007,8 @@
     z-index: 20;
   }
   #Project .projects-container .project-tile .transparent-bg .skills-icons .icons-list {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1116,7 +1099,6 @@
   #email-form .transparent-bg form .send {
     min-width: 100px;
     -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
         align-self: end;
     color: #c4c4c4;
     font-family: "Montserrat", sans-serif;
@@ -1211,23 +1193,15 @@
     color: #c4c4c4;
   }
   #email-form #map {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
-    grid-column: 1 / span 4;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    grid-column: 1/span 4;
+    align-self: center;
+    justify-self: center;
   }
 }
-
 @media screen and (min-width: 750px) {
   #email-form {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -1257,7 +1231,6 @@
     margin: 1em;
   }
 }
-
 @media screen and (min-width: 850px) {
   header {
     padding: 10px 4vw;
@@ -1275,9 +1248,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   header #navbar .menu-container {
     display: none;
@@ -1312,7 +1284,6 @@
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    width: 10vw;
     padding: 0;
     border-radius: 10px;
     top: -2vh;
@@ -1320,7 +1291,7 @@
     background-color: transparent;
     border: 1px solid #df1c4b;
     border: none;
-    width: 60vw;
+    width: 80vw;
     visibility: visible;
     -webkit-transform: translateX(0vw);
             transform: translateX(0vw);
@@ -1345,7 +1316,6 @@
     left: 0;
     width: 60px;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
     height: 50px;
     background-color: #31ed7c;
@@ -1365,9 +1335,11 @@
     transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
   }
   header #navbar #nav-menu .page-links .contacts {
+    display: inline;
     border: 2px solid #31ed7c;
     border-radius: 5px;
     padding: 0.2vh 2vh;
+    width: 20vw !important;
   }
   header #navbar #nav-menu .page-links .contacts:hover {
     border: 2px solid #df1c4b;
@@ -1432,7 +1404,6 @@
     padding: 2px 3vw;
     border-radius: 8px;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
     cursor: pointer;
   }
@@ -1643,10 +1614,8 @@
     width: 95%;
   }
   #skill-set .transparent-bg .skills-icons {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1663,7 +1632,7 @@
             transform: scale(3.2);
   }
   #Project .projects-container {
-    background-color: #c4c4c41f;
+    background-color: rgba(196, 196, 196, 0.1215686275);
     padding: 6vh 3vw;
   }
   #Project .projects-container .project-tile {
@@ -1672,7 +1641,7 @@
   }
   #Project .projects-container .project-tile .projectCover {
     position: absolute;
-    background-color: #070228b6;
+    background-color: rgba(7, 2, 40, 0.7137254902);
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -1694,9 +1663,9 @@
             justify-content: center;
     padding-top: 3vh;
     border-radius: 20px;
-    background-color: #070228b6;
-    -webkit-box-shadow: 0 0 25px black;
-            box-shadow: 0 0 25px black;
+    background-color: rgba(7, 2, 40, 0.7137254902);
+    -webkit-box-shadow: 0 0 25px rgb(0, 0, 0);
+            box-shadow: 0 0 25px rgb(0, 0, 0);
   }
   #Project .projects-container .project-tile .transparent-bg .project-title {
     position: absolute;
@@ -1706,7 +1675,7 @@
     padding: 1.8vh 0;
     z-index: 20;
     font-size: 20px;
-    background-color: #00000050;
+    background-color: rgba(0, 0, 0, 0.3137254902);
     padding: 2vh 2vw;
   }
   #Project .projects-container .project-tile .transparent-bg .params1 {
@@ -1744,10 +1713,8 @@
     z-index: 9999999;
   }
   #Project .projects-container .project-tile .transparent-bg .skills-icons .icons-list {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1823,7 +1790,6 @@
   #email-form .transparent-bg form .send {
     min-width: 100px;
     -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
         align-self: end;
     color: #c4c4c4;
     font-family: "Montserrat", sans-serif;
@@ -1918,17 +1884,11 @@
     color: #c4c4c4;
   }
   #email-form #map {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
-    grid-column: 1 / span 4;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    grid-column: 1/span 4;
+    align-self: center;
+    justify-self: center;
   }
 }
-
 @media screen and (min-width: 1148px) {
   header {
     padding: 10px 4vw;
@@ -1939,23 +1899,23 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #navbar #nav-menu {
     position: absolute;
     background-color: #31ed7c;
     height: 0px;
     width: 0px;
-    right: 0px;
+    right: 50px;
     border-radius: 5px;
     visibility: hidden;
   }
@@ -1993,9 +1953,9 @@
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    width: 10vw;
+    width: 15vw;
     padding: 0;
-    top: -2vh;
+    top: -4vh;
     right: 1.8rem;
     background-color: #fff;
     width: 30vw;
@@ -2028,9 +1988,8 @@
     content: "";
     bottom: 0;
     left: 2;
-    width: 60px;
+    width: 80px;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
     height: 2px;
     background-color: #31ed7c;
@@ -2074,8 +2033,8 @@
     text-align: start;
     width: 100%;
     margin-bottom: 2em;
-    font-size: 18px;
-    line-height: 1.5rem;
+    font-size: 2em;
+    line-height: 40px;
   }
   #welcome-section .params2 {
     margin: 3vh 0;
@@ -2092,7 +2051,6 @@
     padding: 2px 3vw;
     border-radius: 8px;
     -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
         align-self: start;
     color: #c4c4c4;
     z-index: 99999999;
@@ -2173,6 +2131,8 @@
   section .description {
     margin-bottom: 4vh;
     text-align: center;
+    font-size: 2em;
+    line-height: 40px;
   }
   #About-Me {
     display: -webkit-box;
@@ -2207,8 +2167,9 @@
             justify-content: center;
     padding: 3em 1em;
     text-align: center;
-    line-height: 25px;
+    line-height: 40px;
     border-radius: 10px;
+    font-size: 1em;
   }
   #About-Me .transparent-bg .params1 {
     font-size: 14px;
@@ -2248,10 +2209,8 @@
     width: 95%;
   }
   #skill-set .transparent-bg .skills-icons {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2319,10 +2278,10 @@
     display: none;
   }
   #Project .projects-container .project-tile .first {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/Screenshot (91).png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0.5843137255), rgba(223, 28, 75, 0.5843137255)), url("../images/Screenshot (91).png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .first:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/Screenshot (91).png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0), rgba(223, 28, 75, 0)), url("../images/Screenshot (91).png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
@@ -2332,10 +2291,10 @@
     transition: all 0.2s ease-in-out;
   }
   #Project .projects-container .project-tile .second {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/LandingPage.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0.5843137255), rgba(223, 28, 75, 0.5843137255)), url("../images/LandingPage.png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .second:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/LandingPage.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0), rgba(223, 28, 75, 0)), url("../images/LandingPage.png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
@@ -2345,10 +2304,10 @@
     transition: all 0.2s ease-in-out;
   }
   #Project .projects-container .project-tile .third {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/Survey form (89).png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0.5843137255), rgba(223, 28, 75, 0.5843137255)), url("../images/Survey form (89).png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .third:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/Survey form (89).png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0), rgba(223, 28, 75, 0)), url("../images/Survey form (89).png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
@@ -2358,10 +2317,10 @@
     transition: all 0.2s ease-in-out;
   }
   #Project .projects-container .project-tile .fourth {
-    background: linear-gradient(130deg, #31ed7c95, #df1c4b95), url("../images/tributePg.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0.5843137255), rgba(223, 28, 75, 0.5843137255)), url("../images/tributePg.png") no-repeat center center/cover;
   }
   #Project .projects-container .project-tile .fourth:hover {
-    background: linear-gradient(130deg, #31ed7c00, #df1c4b00), url("../images/tributePg.png") no-repeat center center/cover;
+    background: linear-gradient(130deg, rgba(49, 237, 124, 0), rgba(223, 28, 75, 0)), url("../images/tributePg.png") no-repeat center center/cover;
     z-index: 999;
     border-radius: 10px;
     border: 2px solid #df1c4b;
@@ -2392,7 +2351,7 @@
             justify-content: center;
     padding-top: 3vh;
     border-radius: 5px;
-    background-color: #070228b6;
+    background-color: rgba(7, 2, 40, 0.7137254902);
     -webkit-box-shadow: 0 0 25px black;
             box-shadow: 0 0 25px black;
     -webkit-transition: all 0.5s ease-in-out;
@@ -2426,6 +2385,8 @@
     margin-top: 2vh;
     width: 80%;
     z-index: 20;
+    font-size: 1.8em;
+    line-height: 30px;
   }
   #Project .projects-container .project-tile .transparent-bg .separator {
     display: none;
@@ -2460,10 +2421,8 @@
     border-radius: 5px;
   }
   #Project .projects-container .project-tile .transparent-bg .skills-icons .icons-list {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2533,6 +2492,7 @@
   #email-form .transparent-bg form .subject input,
   #email-form .transparent-bg form .names input {
     width: 100%;
+    font-size: 1.8em !important;
   }
   #email-form .transparent-bg form textarea {
     width: 100%;
@@ -2547,11 +2507,11 @@
     border: #31ed7c solid 2px;
     border-radius: 15px;
     color: #ffffff;
+    font-size: 1.8em !important;
   }
   #email-form .transparent-bg form #send {
     min-width: 100px;
     -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
         align-self: end;
     color: #c4c4c4;
     font-family: "Montserrat", sans-serif;
@@ -2560,6 +2520,7 @@
   #email-form .transparent-bg form input:focus,
   #email-form .transparent-bg form textarea:focus {
     border: 2px solid #df1c4b;
+    font-size: 1.8em !important;
   }
   #email-form .contact-info {
     display: -webkit-box;
@@ -2600,6 +2561,7 @@
             justify-content: center;
     width: 100%;
     margin-bottom: 2vh;
+    font-size: 1.8em;
   }
   #email-form .contact-info .resume .transparent-bg,
   #email-form .contact-info .cell-phone .transparent-bg,
@@ -2639,17 +2601,11 @@
     color: #c4c4c4;
   }
   #email-form #map {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
-    grid-column: 1 / span 4;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    grid-column: 1/span 4;
+    align-self: center;
+    justify-self: center;
   }
 }
-
 *,
 *::before,
 *::after {
@@ -2742,7 +2698,7 @@ section {
 }
 
 .transparent-bg {
-  background-color: #c4c4c410;
+  background-color: rgba(196, 196, 196, 0.062745098);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.349);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.349);
 }
@@ -2752,6 +2708,11 @@ img {
 }
 
 ::-webkit-input-placeholder {
+  color: #c4c4c4;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-moz-placeholder {
   color: #c4c4c4;
   font-family: "Montserrat", sans-serif;
 }
@@ -2842,7 +2803,6 @@ footer {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 .menu-container .ham {
   width: 25px;
   height: 3px;
@@ -2852,7 +2812,6 @@ footer {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .menu-container .ham::after,
 .menu-container .ham::before {
   content: "";
@@ -2865,12 +2824,10 @@ footer {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .menu-container .ham::after {
   -webkit-transform: translateY(-8px);
           transform: translateY(-8px);
 }
-
 .menu-container .ham::before {
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
@@ -2881,12 +2838,10 @@ footer {
           transform: rotate(360deg) translateX(-40px);
   background-color: transparent;
 }
-
 .open .ham::before {
   -webkit-transform: rotate(45deg) translate(30px, -30px);
           transform: rotate(45deg) translate(30px, -30px);
 }
-
 .open .ham::after {
   -webkit-transform: rotate(-45deg) translate(30px, 30px);
           transform: rotate(-45deg) translate(30px, 30px);
@@ -2909,7 +2864,6 @@ footer {
   min-width: 3vw;
   z-index: 9999;
 }
-
 .external-links i {
   color: #31ed7c;
   z-index: 9999;
