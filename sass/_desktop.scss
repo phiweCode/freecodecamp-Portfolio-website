@@ -487,14 +487,14 @@
   }
 
   #navbar {
-    @include flex(row, space-between);
+    @include flex(column, center);
 
     #nav-menu {
       position: absolute;
       background-color: $lightGreen;
       height: 0px;
       width: 0px;
-      right: 0px;
+      right: 50px;
       border-radius: 5px;
       visibility: hidden;
 
@@ -522,9 +522,9 @@
         height: fit-content;
         @include flex(row, center);
         text-align: center;
-        width: 10vw;
+        width: 15vw;
         padding: 0;
-        top: -2vh;
+        top: -4vh;
         right: 1.8rem;
         background-color: #fff;
         width: 30vw;
@@ -545,7 +545,7 @@
             content: "";
             bottom: 0;
             left: 2;
-            width: 60px;
+            width: 80px;
             align-self: center;
             height: 2px;
             background-color: $lightGreen;
@@ -575,8 +575,8 @@
       text-align: start;
       width: 100%;
       margin-bottom: 2em;
-      font-size: 18px;
-      line-height: 1.5rem;
+      font-size: 2em;
+      line-height: 40px;
     }
 
     .params2 {
@@ -658,6 +658,8 @@
     .description {
       margin-bottom: 4vh;
       text-align: center;
+      font-size: 2em;
+      line-height: 40px;
     }
   }
 
@@ -670,8 +672,9 @@
       @include flex(column, center);
       padding: 3em 1em;
       text-align: center;
-      line-height: 25px;
+      line-height: 40px;
       border-radius: 10px;
+      font-size: 1em;
 
       .params1 {
         font-size: 14px;
@@ -850,6 +853,8 @@
             margin-top: 2vh;
             width: 80%;
             z-index: 20;
+            font-size: 1.8em;
+            line-height: 30px;
           }
 
           .separator {
@@ -922,9 +927,12 @@
         .email,
         .subject,
         .names {
+          
           width: 100%;
           input {
             width: 100%;
+            font-size: 1.8em !important;
+            
           }
         }
 
@@ -942,6 +950,7 @@
           border: $lightGreen solid 2px;
           border-radius: 15px;
           color: #ffffff;
+          font-size: 1.8em !important;
         }
 
         #send {
@@ -955,6 +964,7 @@
         input:focus,
         textarea:focus {
           border: 2px solid $customPink;
+          font-size: 1.8em !important;
         }
       }
     }
@@ -973,6 +983,7 @@
         @include flex(column, center);
         width: 100%;
         margin-bottom: 2vh;
+        font-size: 1.8em;
 
         .transparent-bg {
           @include flex(row, start);
