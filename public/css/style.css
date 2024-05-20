@@ -687,8 +687,9 @@
     text-align: start;
     width: 100%;
     margin-bottom: 2em;
-    font-size: 16px;
-    line-height: 1.5rem;
+    font-size: 2em;
+    line-height: 40px;
+    padding: 3em;
   }
   #welcome-section .params2 {
     margin: 2vh 0;
@@ -825,6 +826,9 @@
   section .description {
     margin-bottom: 4vh;
     text-align: center;
+    font-size: 2em;
+    line-height: 40px;
+    padding: 0 5%;
   }
   #About-Me {
     display: -webkit-box;
@@ -842,6 +846,8 @@
             justify-content: center;
     width: 100%;
     padding: 5vh 5vw;
+    font-size: 0.9em;
+    line-height: 40px;
   }
   #About-Me .transparent-bg {
     display: -webkit-box;
@@ -1382,7 +1388,8 @@
     text-align: start;
     width: 100%;
     margin-bottom: 2em;
-    font-size: 13px;
+    margin-right: 2em;
+    font-size: 2em;
     line-height: 1.5rem;
     font-weight: 500;
   }
@@ -1539,6 +1546,8 @@
   section .description {
     margin-bottom: 4vh;
     text-align: center;
+    font-size: 2em;
+    line-height: 40px;
   }
   #About-Me {
     display: -webkit-box;
@@ -1573,8 +1582,9 @@
             justify-content: center;
     padding: 3em 1em;
     text-align: center;
-    line-height: 25px;
+    line-height: 40px;
     border-radius: 10px;
+    font-size: 0.9em;
   }
   #About-Me .transparent-bg .params1 {
     font-size: 14px;

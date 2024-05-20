@@ -108,7 +108,8 @@
       text-align: start;
       width: 100%;
       margin-bottom: 2em;
-      font-size: 13px;
+      margin-right: 2em;
+      font-size: 2em;
       line-height: 1.5rem;
       font-weight: 500;
     }
@@ -247,6 +248,8 @@
     .description {
       margin-bottom: 4vh;
       text-align: center;
+      font-size: 2em;
+      line-height: 40px;
     }
   }
 
@@ -259,12 +262,14 @@
       @include flex(column, center);
       padding: 3em 1em;
       text-align: center;
-      line-height: 25px;
+      line-height: 40px;
       border-radius: 10px;
+      font-size: .9em;
 
       .params1 {
         font-size: 14px;
         width: 80%;
+  
       }
     }
   }

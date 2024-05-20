@@ -97,8 +97,9 @@
       text-align: start;
       width: 100%;
       margin-bottom: 2em;
-      font-size: 16px;
-      line-height: 1.5rem;
+      font-size: 2em;
+      line-height: 40px;
+      padding: 3em;
     }
 
     .params2 {
@@ -229,6 +230,9 @@
     .description {
       margin-bottom: 4vh;
       text-align: center;
+      font-size: 2em; 
+      line-height: 40px;
+      padding:0 5% ;
     }
   }
 
@@ -236,6 +240,8 @@
     @include flex(column, center);
     width: 100%;
     padding: 5vh 5vw;
+    font-size: .9em;
+    line-height: 40px;
 
     .transparent-bg {
       @include flex(column, center);
